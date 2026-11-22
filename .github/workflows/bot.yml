@@ -32,5 +32,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add portefeuille.json
+          transactions.json
           git diff --staged --quiet || git commit -m "Sauvegarde portefeuille virtuel"
           git push
