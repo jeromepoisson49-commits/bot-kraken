@@ -18,5 +18,23 @@
         "frais_eur": 0.2,
         "gain_perte": 0.53,
         "date": "2026-11-22T10:40:42.821094+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "SOLEUR",
+        "quantite": 0.7777604248008745,
+        "prix_achat": 64.03,
+        "montant_eur": 50.0,
+        "frais_eur": 0.2,
+        "date": "2026-11-22T12:59:48.009072+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "XXBTZEUR",
+        "quantite": 0.0008977453611982917,
+        "prix_achat": 55472.3,
+        "montant_eur": 50.0,
+        "frais_eur": 0.2,
+        "date": "2026-11-22T12:59:48.009100+00:00"
     }
 ]
