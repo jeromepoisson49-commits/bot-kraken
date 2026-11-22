@@ -62,7 +62,7 @@ def main():
 
         elif (
             ancien
-            and cours <= ancien * 0.97
+            and cours <= ancien * 0.995
             and p["euros"] >= MISE_MAX
             and len(p["positions"]) < MAX_POSITIONS
         ):
