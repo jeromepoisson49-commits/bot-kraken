@@ -2,17 +2,21 @@
 import requests
 import json
 import os
+import time
 from datetime import datetime, timezone
 
 CAPITAL_INITIAL = 500.0
 FICHIER = "portefeuille.json"
 HISTORIQUE = "transactions.json"
 
-FRAIS = 0.004
-MISE_MAX = 50.0
-MAX_POSITIONS = 2
+FRAIS = 0.0
+MISE_MAX = 10.0
+MAX_POSITIONS = 4
+INTERVALLE_SECONDES = 60
+BAISSE_ACHAT = 0.001  # 0,10 %
 
 CRYPTOS = ["XBTEUR", "ETHEUR", "SOLEUR", "XRPEUR", "ADAEUR"]
+
 
 def charger_json(fichier, defaut):
     if os.path.exists(fichier):
@@ -20,9 +24,11 @@ def charger_json(fichier, defaut):
             return json.load(f)
     return defaut
 
+
 def sauvegarder_json(fichier, donnees):
     with open(fichier, "w") as f:
         json.dump(donnees, f, indent=4)
+
 
 def obtenir_prix():
     url = "https://api.kraken.com/0/public/Ticker"
@@ -42,22 +48,18 @@ def obtenir_prix():
         for paire, valeurs in data["result"].items()
     }
 
+
 def enregistrer_transaction(historique, transaction):
     transaction["date"] = datetime.now(timezone.utc).isoformat()
     historique.append(transaction)
 
-def main():
-    p = charger_json(FICHIER, {
-        "euros": CAPITAL_INITIAL,
-        "positions": {},
-        "derniers_prix": {}
-    })
 
-    historique = charger_json(HISTORIQUE, [])
+def executer_cycle(p, historique):
     prix = obtenir_prix()
 
-    print("\n--- SIMULATEUR KRAKEN ---")
+    print("\n--- SIMULATEUR KRAKEN | CYCLE 1 MINUTE ---")
     print(f"Euros disponibles : {p['euros']:.2f} €")
+    print(f"Positions ouvertes : {len(p['positions'])}/{MAX_POSITIONS}")
 
     for paire, cours in prix.items():
         position = p["positions"].get(paire)
@@ -65,21 +67,19 @@ def main():
 
         print(f"{paire} : {cours:.6f} €")
 
+        # GESTION DES VENTES
         if position:
             achat = position["prix_achat"]
 
             if cours >= achat * 1.015 or cours <= achat * 0.99:
-                brut = position["quantite"] * cours
-                frais = brut * FRAIS
-                net = brut - frais
-
+                montant_vente = position["quantite"] * cours
                 cout_achat = position.get(
                     "cout_total",
                     position["quantite"] * achat
                 )
+                gain = montant_vente - cout_achat
 
-                gain = net - cout_achat
-                p["euros"] += net
+                p["euros"] += montant_vente
 
                 enregistrer_transaction(historique, {
                     "type": "VENTE",
@@ -87,23 +87,27 @@ def main():
                     "quantite": position["quantite"],
                     "prix_achat": achat,
                     "prix_vente": cours,
-                    "montant_eur": round(net, 2),
-                    "frais_eur": round(frais, 2),
+                    "montant_eur": round(montant_vente, 2),
+                    "frais_eur": 0.0,
                     "gain_perte": round(gain, 2)
                 })
 
                 del p["positions"][paire]
-                print(f"VENTE SIMULEE : {paire} | Gain/perte : {gain:.2f} €")
 
+                print(
+                    f"VENTE SIMULEE : {paire} "
+                    f"| Gain/perte : {gain:.2f} €"
+                )
+
+        # GESTION DES ACHATS
         elif (
-            ancien
-            and cours <= ancien * 0.995
+            ancien is not None
+            and cours <= ancien * (1 - BAISSE_ACHAT)
             and p["euros"] >= MISE_MAX
             and len(p["positions"]) < MAX_POSITIONS
         ):
             mise = MISE_MAX
-            frais = mise * FRAIS
-            quantite = (mise - frais) / cours
+            quantite = mise / cours
 
             p["euros"] -= mise
 
@@ -119,17 +123,19 @@ def main():
                 "quantite": quantite,
                 "prix_achat": cours,
                 "montant_eur": round(mise, 2),
-                "frais_eur": round(frais, 2)
+                "frais_eur": 0.0
             })
 
             print(f"ACHAT SIMULE : {paire} pour {mise:.2f} €")
 
         p["derniers_prix"][paire] = cours
 
+    # CALCUL DU PORTEFEUILLE
     total = p["euros"]
 
     for paire, position in p["positions"].items():
-        total += position["quantite"] * prix[paire]
+        if paire in prix:
+            total += position["quantite"] * prix[paire]
 
     print(f"\nValeur totale : {total:.2f} €")
     print(f"Gain/perte total : {total - CAPITAL_INITIAL:.2f} €")
@@ -137,6 +143,39 @@ def main():
 
     sauvegarder_json(FICHIER, p)
     sauvegarder_json(HISTORIQUE, historique)
+
+
+def main():
+    p = charger_json(FICHIER, {
+        "euros": CAPITAL_INITIAL,
+        "positions": {},
+        "derniers_prix": {}
+    })
+
+    p.setdefault("positions", {})
+    p.setdefault("derniers_prix", {})
+
+    historique = charger_json(HISTORIQUE, [])
+
+    print("Démarrage du simulateur Kraken.")
+    print("Frais simulés : 0 €.")
+    print("Aucun ordre réel ne sera envoyé.")
+    print("Arrêt avec Ctrl+C.")
+
+    while True:
+        debut = time.monotonic()
+
+        try:
+            executer_cycle(p, historique)
+        except Exception as erreur:
+            print(f"Erreur pendant le cycle : {erreur}")
+
+        duree = time.monotonic() - debut
+        attente = max(0, INTERVALLE_SECONDES - duree)
+
+        print(f"Prochain contrôle dans {attente:.0f} seconde(s).")
+        time.sleep(attente)
+
 
 if __name__ == "__main__":
     main()
