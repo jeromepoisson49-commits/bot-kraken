@@ -5,189 +5,233 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kraken Portfolio</title>
-
 <style>
 *{box-sizing:border-box}
-body{
- margin:0;padding:20px;
- background:#0b1020;color:#f4f6ff;
- font-family:Arial,sans-serif
-}
-header{display:flex;justify-content:space-between;align-items:center}
-h1{font-size:23px}
-.muted{color:#8993ad;font-size:13px}
-.card{
- background:#151d32;border:1px solid #26324d;
- border-radius:17px;padding:19px;margin-top:16px
-}
-.balance{font-size:30px;font-weight:bold;margin:12px 0}
-.green{color:#36d99a}
-.red{color:#ff647c}
+body{margin:0;padding:20px;background:#101522;color:#f2f4f8;font-family:Arial,sans-serif}
+.container{max-width:750px;margin:auto}
+h1{font-size:27px;margin:12px 0}
+h2{font-size:19px;margin:0 0 18px}
+header{color:#aebbd0;font-size:13px;letter-spacing:2px}
+.status{color:#54d6a0;font-size:13px;margin:12px 0 22px}
+.card{background:#1b2536;border:1px solid #2b3a50;border-radius:14px;padding:18px;margin:14px 0}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.coin{
- display:flex;justify-content:space-between;
- gap:10px;align-items:center;padding:13px 0;
- border-bottom:1px solid #29334b;font-size:13px
-}
-button{
- background:#725cff;color:white;border:0;
- border-radius:10px;padding:13px;width:100%;
- margin-top:12px;font-weight:bold
-}
-.status{color:#36d99a}
-footer{text-align:center;color:#69738c;font-size:12px;margin:25px 0}
+.metric{background:#26344a;padding:14px;border-radius:10px}
+.metric small{display:block;color:#aebbd0;font-size:11px;margin-bottom:9px}
+.metric strong{font-size:22px}
+.section{margin-top:25px}
+.coin,.transaction,.position{display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid #344258}
+.coin:last-child,.transaction:last-child,.position:last-child{border:0}
+.coin strong{color:#fff}
+.muted{color:#9eacc1;font-size:12px}
+button{width:100%;padding:13px;border:0;border-radius:9px;background:#586fe8;color:white;font-size:15px;margin-top:12px}
+.positive{color:#54d6a0}
+.negative{color:#ff7777}
+footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
 </style>
 </head>
-
 <body>
-
-<header>
- <div>
-  <div class="muted">KRAKEN • TABLEAU DE BORD</div>
-  <h1>Mon portefeuille</h1>
- </div>
- <div class="status">● SIMULATION</div>
-</header>
+<div class="container">
+<header>KRAKEN • TABLEAU DE BORD</header>
+<h1>Mon portefeuille</h1>
+<div class="status">● SIMULATION — AUCUN ACHAT RÉEL</div>
 
 <div class="card">
- <div class="muted">CAPITAL INITIAL</div>
- <div class="balance">500,00 €</div>
- <div class="muted">Portefeuille virtuel</div>
-</div>
-
+<h2>Portefeuille virtuel</h2>
 <div class="grid">
- <div class="card">
-  <div class="muted">EUROS DISPONIBLES</div>
-  <div class="balance" id="euros">500 €</div>
- </div>
- <div class="card">
-  <div class="muted">GAIN / PERTE</div>
-  <div class="balance" id="gain">0 €</div>
- </div>
+<div class="metric">
+<small>CAPITAL INITIAL</small>
+<strong>500,00 €</strong>
+</div>
+<div class="metric">
+<small>EUROS DISPONIBLES</small>
+<strong id="euros">Chargement...</strong>
+</div>
+<div class="metric">
+<small>VALEUR TOTALE</small>
+<strong id="total">Chargement...</strong>
+</div>
+<div class="metric">
+<small>GAIN / PERTE</small>
+<strong id="gain">Chargement...</strong>
+</div>
+</div>
 </div>
 
-<div class="card">
- <h3>Marché crypto</h3>
- <div id="coins">Chargement des cours...</div>
- <button onclick="charger()">Actualiser les cours</button>
+<div class="card section">
+<h2>Positions ouvertes</h2>
+<div id="positions" class="muted">Chargement...</div>
 </div>
 
-<div class="card">
- <h3>Historique des transactions</h3>
- <div id="historique">Chargement de l'historique...</div>
+<div class="card section">
+<h2>Marché crypto</h2>
+<div id="marche">Chargement des cours...</div>
+<button onclick="actualiser()">Actualiser les cours</button>
 </div>
 
-<div class="card">
- <h3>État du robot</h3>
- <p class="status">● Robot hébergé sur GitHub Actions</p>
- <p class="muted">Dernière actualisation : <span id="heure">—</span></p>
- <p class="muted">Données du portefeuille : connexion à venir.</p>
+<div class="card section">
+<h2>Historique des transactions</h2>
+<div id="historique">Chargement...</div>
 </div>
 
-<footer>
- Kraken Portfolio • Tableau de bord personnel
-</footer>
+<div class="card section">
+<h2>État du robot</h2>
+<div class="status">● Robot hébergé sur GitHub Actions</div>
+<div class="muted">Dernière actualisation : <span id="maj">-</span></div>
+</div>
+
+<footer>Kraken Portfolio • Tableau de bord personnel</footer>
+</div>
 
 <script>
+const paires = {
+"XXBTZEUR": {nom:"Bitcoin", symbole:"BTC"},
+"XETHZEUR": {nom:"Ethereum", symbole:"ETH"},
+"SOLEUR": {nom:"Solana", symbole:"SOL"},
+"XXRPZEUR": {nom:"XRP", symbole:"XRP"},
+"ADAEUR": {nom:"Cardano", symbole:"ADA"}
+};
 
-async function charger(){
- const zone=document.getElementById("coins");
- zone.textContent="Chargement...";
+let prix = {};
+
+function euro(valeur){
+ return Number(valeur || 0).toLocaleString("fr-FR",{
+  style:"currency",currency:"EUR"
+ });
+}
+
+async function actualiser(){
+ document.getElementById("maj").textContent =
+  new Date().toLocaleTimeString("fr-FR");
 
  try{
-  const r=await fetch(
+  const reponse = await fetch(
    "https://api.kraken.com/0/public/Ticker?pair=XBTEUR,ETHEUR,SOLEUR,XRPEUR,ADAEUR"
   );
+  const donnees = await reponse.json();
 
-  const d=await r.json();
-  if(d.error.length) throw new Error("Erreur Kraken");
-
-  const noms={
-   "XXBTZEUR":"Bitcoin",
-   "XETHZEUR":"Ethereum",
-   "SOLEUR":"Solana",
-   "XXRPZEUR":"XRP",
-   "ADAEUR":"Cardano"
-  };
-
-  zone.innerHTML="";
-
-  for(const [paire,v] of Object.entries(d.result)){
-   const ligne=document.createElement("div");
-   ligne.className="coin";
-
-   const nom=document.createElement("span");
-   nom.textContent=noms[paire]||paire;
-
-   const prix=document.createElement("strong");
-   prix.textContent=Number(v.c[0]).toLocaleString(
-    "fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2}
-   )+" €";
-
-   ligne.append(nom,prix);
-   zone.append(ligne);
+  if(donnees.error && donnees.error.length){
+   throw new Error(donnees.error.join(", "));
   }
 
-  document.getElementById("heure").textContent=
-   new Date().toLocaleTimeString("fr-FR");
+  prix = donnees.result;
+  afficherMarche();
+  await chargerPortefeuille();
+ }catch(erreur){
+  document.getElementById("marche").textContent =
+   "Impossible de récupérer les cours pour le moment.";
+ }
+}
 
- }catch(e){
-  zone.textContent="Cours indisponibles. Réessaie.";
+function trouverPrix(paire){
+ const correspondance = {
+  "XXBTZEUR":"XXBTZEUR",
+  "XETHZEUR":"XETHZEUR",
+  "SOLEUR":"SOLEUR",
+  "XXRPZEUR":"XXRPZEUR",
+  "ADAEUR":"ADAEUR"
+ };
+ const cle = correspondance[paire];
+ if(prix[cle]) return Number(prix[cle].c[0]);
+
+ const autre = Object.keys(prix).find(k =>
+  k.includes(paire.replace("XX","X").replace("ZEUR","EUR"))
+ );
+ return autre ? Number(prix[autre].c[0]) : 0;
+}
+
+function afficherMarche(){
+ const noms = {
+  "ADAEUR":"Cardano",
+  "SOLEUR":"Solana",
+  "XETHZEUR":"Ethereum",
+  "XXBTZEUR":"Bitcoin",
+  "XXRPZEUR":"XRP"
+ };
+ const cles = {
+  "ADAEUR":Object.keys(prix).find(k=>k.includes("ADA")),
+  "SOLEUR":Object.keys(prix).find(k=>k.includes("SOL")),
+  "XETHZEUR":Object.keys(prix).find(k=>k.includes("ETH")),
+  "XXBTZEUR":Object.keys(prix).find(k=>k.includes("XBT")),
+  "XXRPZEUR":Object.keys(prix).find(k=>k.includes("XRP"))
+ };
+ document.getElementById("marche").innerHTML =
+  Object.keys(noms).map(p=>{
+   const cle=cles[p];
+   const cours=cle ? Number(prix[cle].c[0]) : 0;
+   return `<div class="coin"><span>${noms[p]}</span><strong>${euro(cours)}</strong></div>`;
+  }).join("");
+}
+
+async function chargerPortefeuille(){
+ try{
+  const r=await fetch("portefeuille.json?t="+Date.now(),{cache:"no-store"});
+  if(!r.ok) throw new Error("Portefeuille inaccessible");
+  const p=await r.json();
+
+  const euros=Number(p.euros || 0);
+  let valeur=euros;
+  let html="";
+
+  for(const [paire,pos] of Object.entries(p.positions || {})){
+   const cours=trouverPrix(paire);
+   const quantite=Number(pos.quantite || 0);
+   const achat=Number(pos.prix_achat || 0);
+   const montant=quantite*cours;
+   valeur+=montant;
+   html+=`<div class="position">
+    <span>${paires[paire]?.nom || paire}<br>
+    <span class="muted">${quantite.toFixed(5)} unités</span></span>
+    <strong>${euro(montant)}<br>
+    <span class="muted">Achat : ${euro(achat)}</span></strong>
+   </div>`;
+  }
+
+  document.getElementById("euros").textContent=euro(euros);
+  document.getElementById("total").textContent=euro(valeur);
+
+  const gain=valeur-500;
+  const gainElement=document.getElementById("gain");
+  gainElement.textContent=(gain>=0?"+":"")+euro(gain);
+  gainElement.className=gain>=0?"positive":"negative";
+
+  document.getElementById("positions").innerHTML=
+   html || "Aucune position ouverte pour le moment.";
+ }catch(erreur){
+  document.getElementById("euros").textContent="Indisponible";
+  document.getElementById("total").textContent="Indisponible";
+  document.getElementById("gain").textContent="Indisponible";
+  document.getElementById("positions").textContent=
+   "Impossible de lire le portefeuille.";
  }
 }
 
 async function afficherHistorique(){
- const zone=document.getElementById("historique");
-
  try{
-  const reponse=await fetch("transactions.json?t="+Date.now());
+  const r=await fetch("transactions.json?t="+Date.now(),{cache:"no-store"});
+  if(!r.ok) throw new Error("Historique inaccessible");
+  const historique=await r.json();
 
-  if(!reponse.ok) throw new Error("Fichier introuvable");
-
-  const transactions=await reponse.json();
-
-  if(transactions.length===0){
-   zone.textContent="Aucune transaction pour le moment.";
-   return;
-  }
-
-  zone.innerHTML="";
-
-  transactions.slice().reverse().forEach(t=>{
-   const ligne=document.createElement("div");
-   ligne.className="coin";
-
-   const infos=document.createElement("span");
-   infos.textContent=
-    t.type+" - "+t.crypto+" - "+
-    new Date(t.date).toLocaleString("fr-FR");
-
-   const montant=document.createElement("span");
-   montant.textContent=
-    Number(t.montant_eur).toFixed(2)+" €";
-
-   montant.className=t.type==="ACHAT"?"red":"green";
-
-   ligne.append(infos,montant);
-   zone.append(ligne);
-
-   if(t.type==="VENTE" && t.gain_perte!==undefined){
-    const gain=document.createElement("div");
-    gain.className="muted";
-    gain.textContent="Gain / perte : "+
-     Number(t.gain_perte).toFixed(2)+" €";
-    zone.append(gain);
-   }
-  });
-
- }catch(e){
-  zone.textContent="Historique indisponible.";
+  document.getElementById("historique").innerHTML=
+   historique.length ? historique.slice().reverse().map(t=>{
+    const date=t.date ? new Date(t.date).toLocaleString("fr-FR") : "";
+    const type=t.type || "TRANSACTION";
+    const montant=euro(t.montant_eur);
+    const gain=t.gain_perte !== undefined
+     ? `<div class="muted">Gain / perte : ${euro(t.gain_perte)}</div>` : "";
+    return `<div class="transaction">
+     <div><strong>${type} - ${paires[t.crypto]?.nom || t.crypto}</strong>
+     <div class="muted">${date}</div>${gain}</div>
+     <strong>${montant}</strong>
+    </div>`;
+   }).join("") : "Aucune transaction enregistrée.";
+ }catch(erreur){
+  document.getElementById("historique").textContent=
+   "Impossible de lire l'historique.";
  }
 }
 
-charger();
+actualiser();
 afficherHistorique();
-
 </script>
 </body>
 </html>
