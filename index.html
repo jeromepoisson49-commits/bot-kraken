@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kraken Portfolio</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:#f4f6ff;font-family:Arial,sans-serif;padding:20px}
+header{display:flex;justify-content:space-between;align-items:center}
+h1{font-size:23px;margin:8px 0}
+.muted{color:#8993ad;font-size:13px}
+.card{background:#151d32;border:1px solid #26324d;border-radius:17px;padding:19px;margin-top:16px}
+.balance{font-size:35px;font-weight:bold;margin:12px 0}
+.green{color:#36d99a}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.coin{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #29334b}
+.coin:last-child{border:0}
+.name{font-weight:bold}
+.value{font-weight:bold}
+button{background:#725cff;color:white;border:0;border-radius:10px;padding:12px;width:100%;margin-top:12px;font-weight:bold}
+.status{color:#36d99a}
+footer{text-align:center;color:#69738c;font-size:12px;margin:25px 0}
+</style>
+</head>
+<body>
+<header>
+<div>
+<div class="muted">KRAKEN • TABLEAU DE BORD</div>
+<h1>Mon portefeuille</h1>
+</div>
+<div class="status">● SIMULATION</div>
+</header>
+
+<div class="card">
+<div class="muted">CAPITAL INITIAL</div>
+<div class="balance">500,00 €</div>
+<div class="muted">Portefeuille virtuel • Aucun argent réel engagé</div>
+</div>
+
+<div class="grid">
+<div class="card">
+<div class="muted">EUROS DISPONIBLES</div>
+<div class="balance" id="euros">500 €</div>
+</div>
+<div class="card">
+<div class="muted">GAIN / PERTE</div>
+<div class="balance" id="gain">0 €</div>
+</div>
+</div>
+
+<div class="card">
+<h3>Marché crypto</h3>
+<div id="coins">Chargement des cours...</div>
+<button onclick="charger()">Actualiser les cours</button>
+</div>
+
+<div class="card">
+<h3>État du robot</h3>
+<p class="status">● Robot hébergé sur GitHub Actions</p>
+<p class="muted">Dernière mise à jour des cours affichés : <span id="heure">—</span></p>
+<p class="muted">Les données du portefeuille seront connectées à l'étape suivante.</p>
+</div>
+
+<footer>Kraken Portfolio • Tableau de bord personnel</footer>
+
+<script>
+async function charger(){
+ const zone=document.getElementById("coins");
+ zone.textContent="Chargement...";
+ try{
+  const r=await fetch("https://api.kraken.com/0/public/Ticker?pair=XBTEUR,ETHEUR,SOLEUR,XRPEUR,ADAEUR");
+  const d=await r.json();
+  if(d.error.length) throw new Error(d.error.join(", "));
+  const noms={"XXBTZEUR":"Bitcoin","XETHZEUR":"Ethereum","SOLEUR":"Solana","XXRPZEUR":"XRP","ADAEUR":"Cardano"};
+  zone.innerHTML="";
+  for(const [paire,v] of Object.entries(d.result)){
+   const prix=Number(v.c[0]);
+   const ligne=document.createElement("div");
+   ligne.className="coin";
+   const nom=document.createElement("span");
+   nom.className="name";
+   nom.textContent=noms[paire]||paire;
+   const valeur=document.createElement("span");
+   valeur.className="value";
+   valeur.textContent=prix.toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";
+   ligne.append(nom,valeur);
+   zone.append(ligne);
+  }
+  document.getElementById("heure").textContent=new Date().toLocaleTimeString("fr-FR");
+ }catch(e){zone.textContent="Impossible de charger les cours. Réessaie.";}
+}
+charger();
+</script>
+</body>
+</html>
