@@ -7,5 +7,16 @@
         "montant_eur": 50.0,
         "frais_eur": 0.2,
         "date": "2026-11-22T05:12:45.610904+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "XXRPZEUR",
+        "quantite": 59.600033510059,
+        "prix_achat": 0.83557,
+        "prix_vente": 0.85119,
+        "montant_eur": 50.53,
+        "frais_eur": 0.2,
+        "gain_perte": 0.53,
+        "date": "2026-11-22T10:40:42.821094+00:00"
     }
 ]
