@@ -124,5 +124,15 @@
         "montant_eur": 10.0,
         "frais_eur": 0.0,
         "date": "2026-11-23T17:28:52.355829+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "Bittensor",
+        "paire": "TAOEUR",
+        "prix_achat": 176.9384,
+        "quantite": 0.05651684428026929,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-23T19:29:21.148688+00:00"
     }
 ]
