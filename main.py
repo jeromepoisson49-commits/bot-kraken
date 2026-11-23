@@ -145,6 +145,7 @@ def executer_cycle(p, historique):
     sauvegarder_json(HISTORIQUE, historique)
 
 
+
 def main():
     p = charger_json(FICHIER, {
         "euros": CAPITAL_INITIAL,
@@ -160,22 +161,15 @@ def main():
     print("Démarrage du simulateur Kraken.")
     print("Frais simulés : 0 €.")
     print("Aucun ordre réel ne sera envoyé.")
-    print("Arrêt avec Ctrl+C.")
 
-    while True:
-        debut = time.monotonic()
-
-        try:
-            executer_cycle(p, historique)
-        except Exception as erreur:
-            print(f"Erreur pendant le cycle : {erreur}")
-
-        duree = time.monotonic() - debut
-        attente = max(0, INTERVALLE_SECONDES - duree)
-
-        print(f"Prochain contrôle dans {attente:.0f} seconde(s).")
-        time.sleep(attente)
+    try:
+        executer_cycle(p, historique)
+        print("Cycle terminé avec succès.")
+    except Exception as erreur:
+        print(f"Erreur : {erreur}")
+        raise
 
 
 if __name__ == "__main__":
     main()
+
