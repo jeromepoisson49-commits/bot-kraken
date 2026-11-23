@@ -11,11 +11,12 @@ from datetime import datetime, timezone
 
 CAPITAL_INITIAL = 500.0
 MISE_PAR_POSITION = 10.0
+MAX_POSITIONS = 4
 
 FRAIS = 0.0
-BAISSE_MIN = 0.001
+BAISSE_MIN = 0.001       # -0,10 %
 MULTIPLICATEUR_VOLUME = 1.5
-OBJECTIF_VENTE = 0.008
+OBJECTIF_VENTE = 0.008   # +0,80 %
 
 INTERVALLE = 60
 
@@ -58,7 +59,7 @@ def enregistrer_transaction(historique, transaction):
 
 
 # ==========================================
-# DONNEES KRAKEN
+# DONNEES PUBLIQUES KRAKEN
 # ==========================================
 
 def requete_kraken(endpoint, params):
@@ -93,12 +94,13 @@ def obtenir_bougies(paire):
 
     bougies = result[cles[0]]
 
-    # Exclusion de la bougie en cours
+    # La dernière bougie est en cours de formation.
+    # On ne conserve que les bougies clôturées.
     bougies_fermees = bougies[:-1]
 
     if len(bougies_fermees) < 22:
         raise Exception(
-            f"Pas assez de bougies pour {paire}"
+            f"Pas assez de bougies pour analyser {paire}"
         )
 
     return bougies_fermees
@@ -123,10 +125,11 @@ def obtenir_prix_actuel(paire):
 # ==========================================
 
 def signal_achat(bougies):
-
     derniere = bougies[-1]
     precedente = bougies[-2]
 
+    # 20 bougies précédentes pour calculer
+    # le volume moyen, sans inclure la dernière.
     volumes_precedents = [
         float(b[6])
         for b in bougies[-21:-1]
@@ -147,11 +150,11 @@ def signal_achat(bougies):
         cloture_precedente - cloture
     ) / cloture_precedente
 
-    baisse_ok = baisse >= BAISSE_MIN
-
     volume_ok = (
         volume >= volume_moyen * MULTIPLICATEUR_VOLUME
     )
+
+    baisse_ok = baisse >= BAISSE_MIN
 
     rebond_ok = cloture > ouverture
 
@@ -160,12 +163,13 @@ def signal_achat(bougies):
         "baisse": baisse,
         "volume": volume,
         "volume_moyen": volume_moyen,
+        "rebond": rebond_ok,
         "timestamp": int(derniere[0])
     }
 
 
 # ==========================================
-# CYCLE DE TRADING SIMULE
+# EXECUTION D'UN CYCLE
 # ==========================================
 
 def executer_cycle(portefeuille, historique):
@@ -180,8 +184,8 @@ def executer_cycle(portefeuille, historique):
     )
 
     print(
-        f"Positions ouvertes : "
-        f"{len(portefeuille['positions'])}"
+        f"Positions : "
+        f"{len(portefeuille['positions'])}/{MAX_POSITIONS}"
     )
 
     for paire in CRYPTOS:
@@ -196,9 +200,9 @@ def executer_cycle(portefeuille, historique):
 
             print(f"\n{paire} : {prix:.6f} €")
 
-            # ==================================
+            # ----------------------------------
             # VENTE A +0,80 %
-            # ==================================
+            # ----------------------------------
 
             if position:
 
@@ -243,15 +247,14 @@ def executer_cycle(portefeuille, historique):
                     )
 
                 else:
-
                     print(
                         f"Position conservée | "
                         f"Objectif : {objectif:.6f} €"
                     )
 
-            # ==================================
+            # ----------------------------------
             # ACHAT
-            # ==================================
+            # ----------------------------------
 
             else:
 
@@ -270,24 +273,27 @@ def executer_cycle(portefeuille, historique):
                     ][paire] = signal["timestamp"]
 
                     print(
-                        f"Baisse : "
-                        f"{signal['baisse'] * 100:.3f} %"
+                        f"Baisse : {signal['baisse'] * 100:.3f} %"
                     )
 
                     print(
-                        f"Volume : {signal['volume']:.4f}"
-                    )
-
-                    print(
-                        f"Volume moyen : "
+                        f"Volume : {signal['volume']:.4f} "
+                        f"| Moyenne : "
                         f"{signal['volume_moyen']:.4f}"
                     )
 
                     if signal["achat"]:
 
-                        if portefeuille["euros"] >= MISE_PAR_POSITION:
+                        if (
+                            len(portefeuille["positions"])
+                            < MAX_POSITIONS
+                            and portefeuille["euros"]
+                            >= MISE_PAR_POSITION
+                        ):
 
-                            quantite = MISE_PAR_POSITION / prix
+                            quantite = (
+                                MISE_PAR_POSITION / prix
+                            )
 
                             portefeuille["euros"] -= (
                                 MISE_PAR_POSITION
@@ -317,57 +323,38 @@ def executer_cycle(portefeuille, historique):
                             )
 
                         else:
-
-                            print(
-                                "Capital insuffisant pour acheter."
-                            )
+                            print("Limite de positions ou de capital atteinte.")
 
                     else:
-
                         print("Pas de signal d'achat confirmé.")
 
             time.sleep(1)
 
         except Exception as erreur:
-
             print(f"Erreur {paire} : {erreur}")
 
-    # ======================================
-    # BILAN DU PORTEFEUILLE
-    # ======================================
+    # --------------------------------------
+    # BILAN
+    # --------------------------------------
 
     total = portefeuille["euros"]
 
     for paire, position in portefeuille["positions"].items():
-
         try:
             prix = obtenir_prix_actuel(paire)
             total += position["quantite"] * prix
-
         except Exception:
             total += position["cout_total"]
 
     print("\n------------ BILAN ------------")
-
-    print(
-        f"Solde disponible : "
-        f"{portefeuille['euros']:.2f} €"
-    )
-
+    print(f"Solde : {portefeuille['euros']:.2f} €")
     print(f"Valeur totale : {total:.2f} €")
-
-    print(
-        f"Résultat : "
-        f"{total - CAPITAL_INITIAL:.2f} €"
-    )
-
+    print(f"Résultat : {total - CAPITAL_INITIAL:.2f} €")
     print(
         f"Positions ouvertes : "
-        f"{len(portefeuille['positions'])}"
+        f"{len(portefeuille['positions'])}/{MAX_POSITIONS}"
     )
-
     print(f"Transactions : {len(historique)}")
-
     print("--------------------------------")
 
     sauvegarder_json(
@@ -408,9 +395,6 @@ def main():
     print("Aucun ordre réel ne sera envoyé.")
     print("Frais simulés : 0 €")
     print("Analyse des bougies : 1 minute")
-    print("Positions maximales : illimitées")
-    print("Mise par achat : 10 €")
-    print("Vente : +0,80 %")
 
     while True:
 
@@ -423,7 +407,6 @@ def main():
             print(f"Erreur générale : {erreur}")
 
         duree = time.monotonic() - debut
-
         attente = max(1, INTERVALLE - duree)
 
         print(
