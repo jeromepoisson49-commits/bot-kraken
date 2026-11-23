@@ -94,5 +94,16 @@
         "montant_eur": 10.0,
         "frais_eur": 0.0,
         "date": "2026-11-23T04:40:44.445688+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "ADAEUR",
+        "quantite": 76.76600187309045,
+        "prix_achat": 0.130266,
+        "prix_vente": 0.132926,
+        "montant_eur": 10.2,
+        "frais_eur": 0.0,
+        "gain_perte": 0.2,
+        "date": "2026-11-23T05:47:13.685618+00:00"
     }
 ]
