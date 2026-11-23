@@ -36,5 +36,23 @@
         "montant_eur": 50.0,
         "frais_eur": 0.2,
         "date": "2026-11-22T12:59:48.009100+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "ADAEUR",
+        "quantite": 76.76600187309045,
+        "prix_achat": 0.130266,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-23T02:17:50.583621+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "XETHZEUR",
+        "quantite": 0.006429793089258388,
+        "prix_achat": 1555.26,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-23T02:17:50.583642+00:00"
     }
 ]
