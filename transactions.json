@@ -76,5 +76,23 @@
         "frais_eur": 0.0,
         "gain_perte": 0.65,
         "date": "2026-11-23T03:23:30.761037+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "XETHZEUR",
+        "quantite": 0.006367804381049414,
+        "prix_achat": 1570.4,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-23T04:40:44.445666+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "SOLEUR",
+        "quantite": 0.1542257865515114,
+        "prix_achat": 64.84,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-23T04:40:44.445688+00:00"
     }
 ]
