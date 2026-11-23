@@ -16,7 +16,7 @@ concurrency:
 jobs:
   surveillance:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
       - name: Recuperer le code
@@ -31,7 +31,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Lancer le simulateur
-        run: python main.py
+        run: python -u main.py
 
       - name: Sauvegarder le portefeuille
         run: |
