@@ -1,5 +1,5 @@
 {
-    "euros": 431.55063184993764,
+    "euros": 421.55063184993764,
     "positions": {
         "XXBTZEUR": {
             "quantite": 0.0008977453611982917,
@@ -15,13 +15,18 @@
             "quantite": 0.1542257865515114,
             "prix_achat": 64.84,
             "cout_total": 10.0
+        },
+        "XXRPZEUR": {
+            "quantite": 11.701928477813144,
+            "prix_achat": 0.85456,
+            "cout_total": 10.0
         }
     },
     "derniers_prix": {
-        "ADAEUR": 0.132926,
-        "XETHZEUR": 1578.17,
-        "SOLEUR": 65.59,
-        "XXBTZEUR": 56158.0,
-        "XXRPZEUR": 0.85696
+        "ADAEUR": 0.132935,
+        "XETHZEUR": 1567.38,
+        "SOLEUR": 65.49,
+        "XXBTZEUR": 55868.3,
+        "XXRPZEUR": 0.85456
     }
 }

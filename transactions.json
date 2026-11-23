@@ -105,5 +105,14 @@
         "frais_eur": 0.0,
         "gain_perte": 0.2,
         "date": "2026-11-23T05:47:13.685618+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "XXRPZEUR",
+        "quantite": 11.701928477813144,
+        "prix_achat": 0.85456,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-23T06:56:05.984955+00:00"
     }
 ]
