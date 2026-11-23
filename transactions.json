@@ -54,5 +54,27 @@
         "montant_eur": 10.0,
         "frais_eur": 0.0,
         "date": "2026-11-23T02:17:50.583642+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "XETHZEUR",
+        "quantite": 0.006429793089258388,
+        "prix_achat": 1555.26,
+        "prix_vente": 1581.8,
+        "montant_eur": 10.17,
+        "frais_eur": 0.0,
+        "gain_perte": 0.17,
+        "date": "2026-11-23T03:23:30.761013+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "SOLEUR",
+        "quantite": 0.7777604248008745,
+        "prix_achat": 64.03,
+        "prix_vente": 65.12,
+        "montant_eur": 50.65,
+        "frais_eur": 0.0,
+        "gain_perte": 0.65,
+        "date": "2026-11-23T03:23:30.761037+00:00"
     }
 ]
