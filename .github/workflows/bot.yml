@@ -1,16 +1,22 @@
+
 name: Bot Crypto Kraken
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/15 * * * *" 
+    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
 
+concurrency:
+  group: bot-crypto-kraken
+  cancel-in-progress: false
+
 jobs:
   surveillance:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Recuperer le code
