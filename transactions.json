@@ -114,5 +114,15 @@
         "montant_eur": 10.0,
         "frais_eur": 0.0,
         "date": "2026-11-23T06:56:05.984955+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "Litecoin",
+        "paire": "LTCEUR",
+        "prix_achat": 38.7,
+        "quantite": 0.25839793281653745,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-23T17:28:52.355829+00:00"
     }
 ]
