@@ -5,18 +5,37 @@ import os
 import time
 from datetime import datetime, timezone
 
+# ==========================================
+# CONFIGURATION
+# ==========================================
+
 CAPITAL_INITIAL = 500.0
-FICHIER = "portefeuille.json"
-HISTORIQUE = "transactions.json"
+MISE_PAR_POSITION = 10.0
 
 FRAIS = 0.0
-MISE_MAX = 10.0
-MAX_POSITIONS = 4
-INTERVALLE_SECONDES = 60
-BAISSE_ACHAT = 0.001  # 0,10 %
+BAISSE_MIN = 0.001
+MULTIPLICATEUR_VOLUME = 1.5
+OBJECTIF_VENTE = 0.008
 
-CRYPTOS = ["XBTEUR", "ETHEUR", "SOLEUR", "XRPEUR", "ADAEUR"]
+INTERVALLE = 60
 
+FICHIER_PORTEFEUILLE = "portefeuille.json"
+FICHIER_HISTORIQUE = "transactions.json"
+
+CRYPTOS = [
+    "XBTEUR",
+    "ETHEUR",
+    "SOLEUR",
+    "XRPEUR",
+    "ADAEUR"
+]
+
+BASE_URL = "https://api.kraken.com/0/public"
+
+
+# ==========================================
+# SAUVEGARDE
+# ==========================================
 
 def charger_json(fichier, defaut):
     if os.path.exists(fichier):
@@ -30,146 +49,390 @@ def sauvegarder_json(fichier, donnees):
         json.dump(donnees, f, indent=4)
 
 
-def obtenir_prix():
-    url = "https://api.kraken.com/0/public/Ticker"
-    r = requests.get(
-        url,
-        params={"pair": ",".join(CRYPTOS)},
-        timeout=20
-    )
-    r.raise_for_status()
-    data = r.json()
-
-    if data["error"]:
-        raise Exception(data["error"])
-
-    return {
-        paire: float(valeurs["c"][0])
-        for paire, valeurs in data["result"].items()
-    }
-
-
 def enregistrer_transaction(historique, transaction):
-    transaction["date"] = datetime.now(timezone.utc).isoformat()
+    transaction["date"] = datetime.now(
+        timezone.utc
+    ).isoformat()
+
     historique.append(transaction)
 
 
-def executer_cycle(p, historique):
-    prix = obtenir_prix()
+# ==========================================
+# DONNEES KRAKEN
+# ==========================================
 
-    print("\n--- SIMULATEUR KRAKEN | CYCLE 1 MINUTE ---")
-    print(f"Euros disponibles : {p['euros']:.2f} €")
-    print(f"Positions ouvertes : {len(p['positions'])}/{MAX_POSITIONS}")
+def requete_kraken(endpoint, params):
+    reponse = requests.get(
+        f"{BASE_URL}/{endpoint}",
+        params=params,
+        timeout=20
+    )
 
-    for paire, cours in prix.items():
-        position = p["positions"].get(paire)
-        ancien = p["derniers_prix"].get(paire)
+    reponse.raise_for_status()
+    donnees = reponse.json()
 
-        print(f"{paire} : {cours:.6f} €")
+    if donnees.get("error"):
+        raise Exception(str(donnees["error"]))
 
-        # GESTION DES VENTES
-        if position:
-            achat = position["prix_achat"]
+    return donnees["result"]
 
-            if cours >= achat * 1.015 or cours <= achat * 0.99:
-                montant_vente = position["quantite"] * cours
-                cout_achat = position.get(
-                    "cout_total",
-                    position["quantite"] * achat
+
+def obtenir_bougies(paire):
+    result = requete_kraken(
+        "OHLC",
+        {
+            "pair": paire,
+            "interval": 1
+        }
+    )
+
+    cles = [k for k in result if k != "last"]
+
+    if not cles:
+        raise Exception(f"Aucune bougie reçue pour {paire}")
+
+    bougies = result[cles[0]]
+
+    # Exclusion de la bougie en cours
+    bougies_fermees = bougies[:-1]
+
+    if len(bougies_fermees) < 22:
+        raise Exception(
+            f"Pas assez de bougies pour {paire}"
+        )
+
+    return bougies_fermees
+
+
+def obtenir_prix_actuel(paire):
+    result = requete_kraken(
+        "Ticker",
+        {"pair": paire}
+    )
+
+    cles = list(result.keys())
+
+    if not cles:
+        raise Exception(f"Prix indisponible pour {paire}")
+
+    return float(result[cles[0]]["c"][0])
+
+
+# ==========================================
+# SIGNAL D'ACHAT
+# ==========================================
+
+def signal_achat(bougies):
+
+    derniere = bougies[-1]
+    precedente = bougies[-2]
+
+    volumes_precedents = [
+        float(b[6])
+        for b in bougies[-21:-1]
+    ]
+
+    volume_moyen = (
+        sum(volumes_precedents)
+        / len(volumes_precedents)
+    )
+
+    ouverture = float(derniere[1])
+    cloture = float(derniere[4])
+    volume = float(derniere[6])
+
+    cloture_precedente = float(precedente[4])
+
+    baisse = (
+        cloture_precedente - cloture
+    ) / cloture_precedente
+
+    baisse_ok = baisse >= BAISSE_MIN
+
+    volume_ok = (
+        volume >= volume_moyen * MULTIPLICATEUR_VOLUME
+    )
+
+    rebond_ok = cloture > ouverture
+
+    return {
+        "achat": baisse_ok and volume_ok and rebond_ok,
+        "baisse": baisse,
+        "volume": volume,
+        "volume_moyen": volume_moyen,
+        "timestamp": int(derniere[0])
+    }
+
+
+# ==========================================
+# CYCLE DE TRADING SIMULE
+# ==========================================
+
+def executer_cycle(portefeuille, historique):
+
+    print("\n================================")
+    print("     BOT KRAKEN - SIMULATION")
+    print("================================")
+
+    print(
+        f"Solde disponible : "
+        f"{portefeuille['euros']:.2f} €"
+    )
+
+    print(
+        f"Positions ouvertes : "
+        f"{len(portefeuille['positions'])}"
+    )
+
+    for paire in CRYPTOS:
+
+        try:
+            bougies = obtenir_bougies(paire)
+            prix = obtenir_prix_actuel(paire)
+
+            signal = signal_achat(bougies)
+
+            position = portefeuille["positions"].get(paire)
+
+            print(f"\n{paire} : {prix:.6f} €")
+
+            # ==================================
+            # VENTE A +0,80 %
+            # ==================================
+
+            if position:
+
+                prix_achat = position["prix_achat"]
+
+                objectif = prix_achat * (
+                    1 + OBJECTIF_VENTE
                 )
-                gain = montant_vente - cout_achat
 
-                p["euros"] += montant_vente
+                if prix >= objectif:
 
-                enregistrer_transaction(historique, {
-                    "type": "VENTE",
-                    "crypto": paire,
-                    "quantite": position["quantite"],
-                    "prix_achat": achat,
-                    "prix_vente": cours,
-                    "montant_eur": round(montant_vente, 2),
-                    "frais_eur": 0.0,
-                    "gain_perte": round(gain, 2)
-                })
+                    montant_vente = (
+                        position["quantite"] * prix
+                    )
 
-                del p["positions"][paire]
+                    gain = (
+                        montant_vente
+                        - position["cout_total"]
+                    )
 
-                print(
-                    f"VENTE SIMULEE : {paire} "
-                    f"| Gain/perte : {gain:.2f} €"
+                    portefeuille["euros"] += montant_vente
+
+                    enregistrer_transaction(
+                        historique,
+                        {
+                            "type": "VENTE",
+                            "crypto": paire,
+                            "prix_achat": prix_achat,
+                            "prix_vente": prix,
+                            "quantite": position["quantite"],
+                            "montant_eur": montant_vente,
+                            "frais_eur": 0.0,
+                            "gain_perte": gain
+                        }
+                    )
+
+                    del portefeuille["positions"][paire]
+
+                    print(
+                        f"VENTE SIMULEE : {paire} "
+                        f"| Gain : {gain:.4f} €"
+                    )
+
+                else:
+
+                    print(
+                        f"Position conservée | "
+                        f"Objectif : {objectif:.6f} €"
+                    )
+
+            # ==================================
+            # ACHAT
+            # ==================================
+
+            else:
+
+                dernier_timestamp = portefeuille[
+                    "dernieres_bougies"
+                ].get(paire)
+
+                nouveau_signal = (
+                    signal["timestamp"] != dernier_timestamp
                 )
 
-        # GESTION DES ACHATS
-        elif (
-            ancien is not None
-            and cours <= ancien * (1 - BAISSE_ACHAT)
-            and p["euros"] >= MISE_MAX
-            and len(p["positions"]) < MAX_POSITIONS
-        ):
-            mise = MISE_MAX
-            quantite = mise / cours
+                if nouveau_signal:
 
-            p["euros"] -= mise
+                    portefeuille[
+                        "dernieres_bougies"
+                    ][paire] = signal["timestamp"]
 
-            p["positions"][paire] = {
-                "quantite": quantite,
-                "prix_achat": cours,
-                "cout_total": mise
-            }
+                    print(
+                        f"Baisse : "
+                        f"{signal['baisse'] * 100:.3f} %"
+                    )
 
-            enregistrer_transaction(historique, {
-                "type": "ACHAT",
-                "crypto": paire,
-                "quantite": quantite,
-                "prix_achat": cours,
-                "montant_eur": round(mise, 2),
-                "frais_eur": 0.0
-            })
+                    print(
+                        f"Volume : {signal['volume']:.4f}"
+                    )
 
-            print(f"ACHAT SIMULE : {paire} pour {mise:.2f} €")
+                    print(
+                        f"Volume moyen : "
+                        f"{signal['volume_moyen']:.4f}"
+                    )
 
-        p["derniers_prix"][paire] = cours
+                    if signal["achat"]:
 
-    # CALCUL DU PORTEFEUILLE
-    total = p["euros"]
+                        if portefeuille["euros"] >= MISE_PAR_POSITION:
 
-    for paire, position in p["positions"].items():
-        if paire in prix:
-            total += position["quantite"] * prix[paire]
+                            quantite = MISE_PAR_POSITION / prix
 
-    print(f"\nValeur totale : {total:.2f} €")
-    print(f"Gain/perte total : {total - CAPITAL_INITIAL:.2f} €")
-    print(f"Transactions enregistrées : {len(historique)}")
+                            portefeuille["euros"] -= (
+                                MISE_PAR_POSITION
+                            )
 
-    sauvegarder_json(FICHIER, p)
-    sauvegarder_json(HISTORIQUE, historique)
+                            portefeuille["positions"][paire] = {
+                                "prix_achat": prix,
+                                "quantite": quantite,
+                                "cout_total": MISE_PAR_POSITION
+                            }
+
+                            enregistrer_transaction(
+                                historique,
+                                {
+                                    "type": "ACHAT",
+                                    "crypto": paire,
+                                    "prix_achat": prix,
+                                    "quantite": quantite,
+                                    "montant_eur": MISE_PAR_POSITION,
+                                    "frais_eur": 0.0
+                                }
+                            )
+
+                            print(
+                                f"ACHAT SIMULE : {paire} "
+                                f"pour {MISE_PAR_POSITION} €"
+                            )
+
+                        else:
+
+                            print(
+                                "Capital insuffisant pour acheter."
+                            )
+
+                    else:
+
+                        print("Pas de signal d'achat confirmé.")
+
+            time.sleep(1)
+
+        except Exception as erreur:
+
+            print(f"Erreur {paire} : {erreur}")
+
+    # ======================================
+    # BILAN DU PORTEFEUILLE
+    # ======================================
+
+    total = portefeuille["euros"]
+
+    for paire, position in portefeuille["positions"].items():
+
+        try:
+            prix = obtenir_prix_actuel(paire)
+            total += position["quantite"] * prix
+
+        except Exception:
+            total += position["cout_total"]
+
+    print("\n------------ BILAN ------------")
+
+    print(
+        f"Solde disponible : "
+        f"{portefeuille['euros']:.2f} €"
+    )
+
+    print(f"Valeur totale : {total:.2f} €")
+
+    print(
+        f"Résultat : "
+        f"{total - CAPITAL_INITIAL:.2f} €"
+    )
+
+    print(
+        f"Positions ouvertes : "
+        f"{len(portefeuille['positions'])}"
+    )
+
+    print(f"Transactions : {len(historique)}")
+
+    print("--------------------------------")
+
+    sauvegarder_json(
+        FICHIER_PORTEFEUILLE,
+        portefeuille
+    )
+
+    sauvegarder_json(
+        FICHIER_HISTORIQUE,
+        historique
+    )
 
 
+# ==========================================
+# DEMARRAGE
+# ==========================================
 
 def main():
-    p = charger_json(FICHIER, {
-        "euros": CAPITAL_INITIAL,
-        "positions": {},
-        "derniers_prix": {}
-    })
 
-    p.setdefault("positions", {})
-    p.setdefault("derniers_prix", {})
+    portefeuille = charger_json(
+        FICHIER_PORTEFEUILLE,
+        {
+            "euros": CAPITAL_INITIAL,
+            "positions": {},
+            "dernieres_bougies": {}
+        }
+    )
 
-    historique = charger_json(HISTORIQUE, [])
+    portefeuille.setdefault("positions", {})
+    portefeuille.setdefault("dernieres_bougies", {})
 
-    print("Démarrage du simulateur Kraken.")
-    print("Frais simulés : 0 €.")
+    historique = charger_json(
+        FICHIER_HISTORIQUE,
+        []
+    )
+
+    print("BOT KRAKEN EN SIMULATION")
     print("Aucun ordre réel ne sera envoyé.")
+    print("Frais simulés : 0 €")
+    print("Analyse des bougies : 1 minute")
+    print("Positions maximales : illimitées")
+    print("Mise par achat : 10 €")
+    print("Vente : +0,80 %")
 
-    try:
-        executer_cycle(p, historique)
-        print("Cycle terminé avec succès.")
-    except Exception as erreur:
-        print(f"Erreur : {erreur}")
-        raise
+    while True:
+
+        debut = time.monotonic()
+
+        try:
+            executer_cycle(portefeuille, historique)
+
+        except Exception as erreur:
+            print(f"Erreur générale : {erreur}")
+
+        duree = time.monotonic() - debut
+
+        attente = max(1, INTERVALLE - duree)
+
+        print(
+            f"\nProchaine analyse dans "
+            f"{attente:.0f} secondes."
+        )
+
+        time.sleep(attente)
 
 
 if __name__ == "__main__":
     main()
-
