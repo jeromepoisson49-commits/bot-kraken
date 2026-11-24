@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "type": "ACHAT",
+        "crypto": "Bittensor",
+        "paire": "TAOEUR",
+        "prix_achat": 164.2182,
+        "quantite": 0.06089459024639169,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-24T21:27:52.731532+00:00"
+    }
+]
