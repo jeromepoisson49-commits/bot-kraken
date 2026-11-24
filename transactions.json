@@ -154,5 +154,29 @@
         "montant_eur": 10.0,
         "frais_eur": 0.0,
         "date": "2026-11-24T03:17:16.171124+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "Bitcoin Cash",
+        "paire": "BCHEUR",
+        "prix_achat": 181.34,
+        "prix_vente": 184.3,
+        "quantite": 0.05514503143266791,
+        "montant_eur": 10.163229293040697,
+        "frais_eur": 0.0,
+        "gain_perte": 0.1632292930406969,
+        "date": "2026-11-24T04:24:38.264923+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "Shiba Inu",
+        "paire": "SHIBEUR",
+        "prix_achat": 3.301e-06,
+        "prix_vente": 3.35e-06,
+        "quantite": 3029385.034837928,
+        "montant_eur": 10.14843986670706,
+        "frais_eur": 0.0,
+        "gain_perte": 0.14843986670705966,
+        "date": "2026-11-24T04:24:38.995765+00:00"
     }
 ]
