@@ -198,5 +198,17 @@
         "montant_eur": 10.0,
         "frais_eur": 0.0,
         "date": "2026-11-24T15:36:05.775348+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "Pepe",
+        "paire": "PEPEEUR",
+        "prix_achat": 3.07e-06,
+        "prix_vente": 3.102e-06,
+        "quantite": 3257328.990228013,
+        "montant_eur": 10.104234527687296,
+        "frais_eur": 0.0,
+        "gain_perte": 0.10423452768729646,
+        "date": "2026-11-24T17:35:13.425476+00:00"
     }
 ]
