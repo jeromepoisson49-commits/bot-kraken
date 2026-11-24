@@ -1,1 +1,3359 @@
-{}
+{
+    "date": "2026-11-24",
+    "catalogue": [
+        {
+            "id": "0GEUR",
+            "altname": "0GEUR",
+            "nom": "0G/EUR",
+            "symbole": "0G"
+        },
+        {
+            "id": "1INCHEUR",
+            "altname": "1INCHEUR",
+            "nom": "1INCH/EUR",
+            "symbole": "1INCH"
+        },
+        {
+            "id": "2ZEUR",
+            "altname": "2ZEUR",
+            "nom": "2Z/EUR",
+            "symbole": "2Z"
+        },
+        {
+            "id": "AAVEEUR",
+            "altname": "AAVEEUR",
+            "nom": "AAVE/EUR",
+            "symbole": "AAVE"
+        },
+        {
+            "id": "ABEUR",
+            "altname": "ABEUR",
+            "nom": "AB/EUR",
+            "symbole": "AB"
+        },
+        {
+            "id": "ACHEUR",
+            "altname": "ACHEUR",
+            "nom": "ACH/EUR",
+            "symbole": "ACH"
+        },
+        {
+            "id": "ACTEUR",
+            "altname": "ACTEUR",
+            "nom": "ACT/EUR",
+            "symbole": "ACT"
+        },
+        {
+            "id": "ACUEUR",
+            "altname": "ACUEUR",
+            "nom": "ACU/EUR",
+            "symbole": "ACU"
+        },
+        {
+            "id": "ADAEUR",
+            "altname": "ADAEUR",
+            "nom": "ADA/EUR",
+            "symbole": "ADA"
+        },
+        {
+            "id": "ADIEUR",
+            "altname": "ADIEUR",
+            "nom": "ADI/EUR",
+            "symbole": "ADI"
+        },
+        {
+            "id": "ADXEUR",
+            "altname": "ADXEUR",
+            "nom": "ADX/EUR",
+            "symbole": "ADX"
+        },
+        {
+            "id": "AEROEUR",
+            "altname": "AEROEUR",
+            "nom": "AERO/EUR",
+            "symbole": "AERO"
+        },
+        {
+            "id": "AEUR",
+            "altname": "AEUR",
+            "nom": "A/EUR",
+            "symbole": "A"
+        },
+        {
+            "id": "AEVOEUR",
+            "altname": "AEVOEUR",
+            "nom": "AEVO/EUR",
+            "symbole": "AEVO"
+        },
+        {
+            "id": "AIEUR",
+            "altname": "AIEUR",
+            "nom": "AI/EUR",
+            "symbole": "AI"
+        },
+        {
+            "id": "AIOZEUR",
+            "altname": "AIOZEUR",
+            "nom": "AIOZ/EUR",
+            "symbole": "AIOZ"
+        },
+        {
+            "id": "AIXBTEUR",
+            "altname": "AIXBTEUR",
+            "nom": "AIXBT/EUR",
+            "symbole": "AIXBT"
+        },
+        {
+            "id": "AKTEUR",
+            "altname": "AKTEUR",
+            "nom": "AKT/EUR",
+            "symbole": "AKT"
+        },
+        {
+            "id": "ALCHEUR",
+            "altname": "ALCHEUR",
+            "nom": "ALCH/EUR",
+            "symbole": "ALCH"
+        },
+        {
+            "id": "ALCXEUR",
+            "altname": "ALCXEUR",
+            "nom": "ALCX/EUR",
+            "symbole": "ALCX"
+        },
+        {
+            "id": "ALGOEUR",
+            "altname": "ALGOEUR",
+            "nom": "ALGO/EUR",
+            "symbole": "ALGO"
+        },
+        {
+            "id": "ALICEEUR",
+            "altname": "ALICEEUR",
+            "nom": "ALICE/EUR",
+            "symbole": "ALICE"
+        },
+        {
+            "id": "ALKIMIEUR",
+            "altname": "ALKIMIEUR",
+            "nom": "ALKIMI/EUR",
+            "symbole": "ALKIMI"
+        },
+        {
+            "id": "ALPHAEUR",
+            "altname": "ALPHAEUR",
+            "nom": "ALPHA/EUR",
+            "symbole": "ALPHA"
+        },
+        {
+            "id": "ALTEUR",
+            "altname": "ALTEUR",
+            "nom": "ALT/EUR",
+            "symbole": "ALT"
+        },
+        {
+            "id": "ANIMEEUR",
+            "altname": "ANIMEEUR",
+            "nom": "ANIME/EUR",
+            "symbole": "ANIME"
+        },
+        {
+            "id": "ANKREUR",
+            "altname": "ANKREUR",
+            "nom": "ANKR/EUR",
+            "symbole": "ANKR"
+        },
+        {
+            "id": "ANONEUR",
+            "altname": "ANONEUR",
+            "nom": "ANON/EUR",
+            "symbole": "ANON"
+        },
+        {
+            "id": "APEEUR",
+            "altname": "APEEUR",
+            "nom": "APE/EUR",
+            "symbole": "APE"
+        },
+        {
+            "id": "APENFTEUR",
+            "altname": "APENFTEUR",
+            "nom": "APENFT/EUR",
+            "symbole": "APENFT"
+        },
+        {
+            "id": "API3EUR",
+            "altname": "API3EUR",
+            "nom": "API3/EUR",
+            "symbole": "API3"
+        },
+        {
+            "id": "APREUR",
+            "altname": "APREUR",
+            "nom": "APR/EUR",
+            "symbole": "APR"
+        },
+        {
+            "id": "APTEUR",
+            "altname": "APTEUR",
+            "nom": "APT/EUR",
+            "symbole": "APT"
+        },
+        {
+            "id": "ARBEUR",
+            "altname": "ARBEUR",
+            "nom": "ARB/EUR",
+            "symbole": "ARB"
+        },
+        {
+            "id": "ARCEUR",
+            "altname": "ARCEUR",
+            "nom": "ARC/EUR",
+            "symbole": "ARC"
+        },
+        {
+            "id": "AREUR",
+            "altname": "AREUR",
+            "nom": "AR/EUR",
+            "symbole": "AR"
+        },
+        {
+            "id": "ARKMEUR",
+            "altname": "ARKMEUR",
+            "nom": "ARKM/EUR",
+            "symbole": "ARKM"
+        },
+        {
+            "id": "ARPAEUR",
+            "altname": "ARPAEUR",
+            "nom": "ARPA/EUR",
+            "symbole": "ARPA"
+        },
+        {
+            "id": "ASTEREUR",
+            "altname": "ASTEREUR",
+            "nom": "ASTER/EUR",
+            "symbole": "ASTER"
+        },
+        {
+            "id": "ASTREUR",
+            "altname": "ASTREUR",
+            "nom": "ASTR/EUR",
+            "symbole": "ASTR"
+        },
+        {
+            "id": "ATHEUR",
+            "altname": "ATHEUR",
+            "nom": "ATH/EUR",
+            "symbole": "ATH"
+        },
+        {
+            "id": "ATOMEUR",
+            "altname": "ATOMEUR",
+            "nom": "ATOM/EUR",
+            "symbole": "ATOM"
+        },
+        {
+            "id": "AUCTIONEUR",
+            "altname": "AUCTIONEUR",
+            "nom": "AUCTION/EUR",
+            "symbole": "AUCTION"
+        },
+        {
+            "id": "AUDIOEUR",
+            "altname": "AUDIOEUR",
+            "nom": "AUDIO/EUR",
+            "symbole": "AUDIO"
+        },
+        {
+            "id": "AVAEUR",
+            "altname": "AVAEUR",
+            "nom": "AVA/EUR",
+            "symbole": "AVA"
+        },
+        {
+            "id": "AVAXEUR",
+            "altname": "AVAXEUR",
+            "nom": "AVAX/EUR",
+            "symbole": "AVAX"
+        },
+        {
+            "id": "AVNTEUR",
+            "altname": "AVNTEUR",
+            "nom": "AVNT/EUR",
+            "symbole": "AVNT"
+        },
+        {
+            "id": "AXSEUR",
+            "altname": "AXSEUR",
+            "nom": "AXS/EUR",
+            "symbole": "AXS"
+        },
+        {
+            "id": "AZTECEUR",
+            "altname": "AZTECEUR",
+            "nom": "AZTEC/EUR",
+            "symbole": "AZTEC"
+        },
+        {
+            "id": "B2EUR",
+            "altname": "B2EUR",
+            "nom": "B2/EUR",
+            "symbole": "B2"
+        },
+        {
+            "id": "B3EUR",
+            "altname": "B3EUR",
+            "nom": "B3/EUR",
+            "symbole": "B3"
+        },
+        {
+            "id": "BABYEUR",
+            "altname": "BABYEUR",
+            "nom": "BABY/EUR",
+            "symbole": "BABY"
+        },
+        {
+            "id": "BADGEREUR",
+            "altname": "BADGEREUR",
+            "nom": "BADGER/EUR",
+            "symbole": "BADGER"
+        },
+        {
+            "id": "BALEUR",
+            "altname": "BALEUR",
+            "nom": "BAL/EUR",
+            "symbole": "BAL"
+        },
+        {
+            "id": "BANANAS31EUR",
+            "altname": "BANANAS31EUR",
+            "nom": "BANANAS31/EUR",
+            "symbole": "BANANAS31"
+        },
+        {
+            "id": "BANDEUR",
+            "altname": "BANDEUR",
+            "nom": "BAND/EUR",
+            "symbole": "BAND"
+        },
+        {
+            "id": "BASEDEUR",
+            "altname": "BASEDEUR",
+            "nom": "BASED/EUR",
+            "symbole": "BASED"
+        },
+        {
+            "id": "BATEUR",
+            "altname": "BATEUR",
+            "nom": "BAT/EUR",
+            "symbole": "BAT"
+        },
+        {
+            "id": "BCHEUR",
+            "altname": "BCHEUR",
+            "nom": "BCH/EUR",
+            "symbole": "BCH"
+        },
+        {
+            "id": "BEAMEUR",
+            "altname": "BEAMEUR",
+            "nom": "BEAM/EUR",
+            "symbole": "BEAM"
+        },
+        {
+            "id": "BERAEUR",
+            "altname": "BERAEUR",
+            "nom": "BERA/EUR",
+            "symbole": "BERA"
+        },
+        {
+            "id": "BERTEUR",
+            "altname": "BERTEUR",
+            "nom": "BERT/EUR",
+            "symbole": "BERT"
+        },
+        {
+            "id": "BGBEUR",
+            "altname": "BGBEUR",
+            "nom": "BGB/EUR",
+            "symbole": "BGB"
+        },
+        {
+            "id": "BICOEUR",
+            "altname": "BICOEUR",
+            "nom": "BICO/EUR",
+            "symbole": "BICO"
+        },
+        {
+            "id": "BIGTIMEEUR",
+            "altname": "BIGTIMEEUR",
+            "nom": "BIGTIME/EUR",
+            "symbole": "BIGTIME"
+        },
+        {
+            "id": "BILLEUR",
+            "altname": "BILLEUR",
+            "nom": "BILL/EUR",
+            "symbole": "BILL"
+        },
+        {
+            "id": "BILLYEUR",
+            "altname": "BILLYEUR",
+            "nom": "BILLY/EUR",
+            "symbole": "BILLY"
+        },
+        {
+            "id": "BIOEUR",
+            "altname": "BIOEUR",
+            "nom": "BIO/EUR",
+            "symbole": "BIO"
+        },
+        {
+            "id": "BLENDEUR",
+            "altname": "BLENDEUR",
+            "nom": "BLEND/EUR",
+            "symbole": "BLEND"
+        },
+        {
+            "id": "BLUAIEUR",
+            "altname": "BLUAIEUR",
+            "nom": "BLUAI/EUR",
+            "symbole": "BLUAI"
+        },
+        {
+            "id": "BLUEEUR",
+            "altname": "BLUEEUR",
+            "nom": "BLUE/EUR",
+            "symbole": "BLUE"
+        },
+        {
+            "id": "BLUREUR",
+            "altname": "BLUREUR",
+            "nom": "BLUR/EUR",
+            "symbole": "BLUR"
+        },
+        {
+            "id": "BMTEUR",
+            "altname": "BMTEUR",
+            "nom": "BMT/EUR",
+            "symbole": "BMT"
+        },
+        {
+            "id": "BNBEUR",
+            "altname": "BNBEUR",
+            "nom": "BNB/EUR",
+            "symbole": "BNB"
+        },
+        {
+            "id": "BNTEUR",
+            "altname": "BNTEUR",
+            "nom": "BNT/EUR",
+            "symbole": "BNT"
+        },
+        {
+            "id": "BOBAEUR",
+            "altname": "BOBAEUR",
+            "nom": "BOBA/EUR",
+            "symbole": "BOBA"
+        },
+        {
+            "id": "BOBEUR",
+            "altname": "BOBEUR",
+            "nom": "BOB/EUR",
+            "symbole": "BOB"
+        },
+        {
+            "id": "BODENEUR",
+            "altname": "BODENEUR",
+            "nom": "BODEN/EUR",
+            "symbole": "BODEN"
+        },
+        {
+            "id": "BONKEUR",
+            "altname": "BONKEUR",
+            "nom": "BONK/EUR",
+            "symbole": "BONK"
+        },
+        {
+            "id": "BREVEUR",
+            "altname": "BREVEUR",
+            "nom": "BREV/EUR",
+            "symbole": "BREV"
+        },
+        {
+            "id": "BTREUR",
+            "altname": "BTREUR",
+            "nom": "BTR/EUR",
+            "symbole": "BTR"
+        },
+        {
+            "id": "BTTEUR",
+            "altname": "BTTEUR",
+            "nom": "BTT/EUR",
+            "symbole": "BTT"
+        },
+        {
+            "id": "CAKEEUR",
+            "altname": "CAKEEUR",
+            "nom": "CAKE/EUR",
+            "symbole": "CAKE"
+        },
+        {
+            "id": "CAMPEUR",
+            "altname": "CAMPEUR",
+            "nom": "CAMP/EUR",
+            "symbole": "CAMP"
+        },
+        {
+            "id": "CARVEUR",
+            "altname": "CARVEUR",
+            "nom": "CARV/EUR",
+            "symbole": "CARV"
+        },
+        {
+            "id": "CATEUR",
+            "altname": "CATEUR",
+            "nom": "CAT/EUR",
+            "symbole": "CAT"
+        },
+        {
+            "id": "CCDEUR",
+            "altname": "CCDEUR",
+            "nom": "CCD/EUR",
+            "symbole": "CCD"
+        },
+        {
+            "id": "CCEUR",
+            "altname": "CCEUR",
+            "nom": "CC/EUR",
+            "symbole": "CC"
+        },
+        {
+            "id": "CELOEUR",
+            "altname": "CELOEUR",
+            "nom": "CELO/EUR",
+            "symbole": "CELO"
+        },
+        {
+            "id": "CELREUR",
+            "altname": "CELREUR",
+            "nom": "CELR/EUR",
+            "symbole": "CELR"
+        },
+        {
+            "id": "CFGEUR",
+            "altname": "CFGEUR",
+            "nom": "CFG/EUR",
+            "symbole": "CFG"
+        },
+        {
+            "id": "CFXEUR",
+            "altname": "CFXEUR",
+            "nom": "CFX/EUR",
+            "symbole": "CFX"
+        },
+        {
+            "id": "CHEEMSEUR",
+            "altname": "CHEEMSEUR",
+            "nom": "CHEEMS/EUR",
+            "symbole": "CHEEMS"
+        },
+        {
+            "id": "CHEXEUR",
+            "altname": "CHEXEUR",
+            "nom": "CHEX/EUR",
+            "symbole": "CHEX"
+        },
+        {
+            "id": "CHILLHOUSEEUR",
+            "altname": "CHILLHOUSEEUR",
+            "nom": "CHILLHOUSE/EUR",
+            "symbole": "CHILLHOUSE"
+        },
+        {
+            "id": "CHIPEUR",
+            "altname": "CHIPEUR",
+            "nom": "CHIP/EUR",
+            "symbole": "CHIP"
+        },
+        {
+            "id": "CHREUR",
+            "altname": "CHREUR",
+            "nom": "CHR/EUR",
+            "symbole": "CHR"
+        },
+        {
+            "id": "CHZEUR",
+            "altname": "CHZEUR",
+            "nom": "CHZ/EUR",
+            "symbole": "CHZ"
+        },
+        {
+            "id": "CLANKEREUR",
+            "altname": "CLANKEREUR",
+            "nom": "CLANKER/EUR",
+            "symbole": "CLANKER"
+        },
+        {
+            "id": "COMPEUR",
+            "altname": "COMPEUR",
+            "nom": "COMP/EUR",
+            "symbole": "COMP"
+        },
+        {
+            "id": "COOKIEEUR",
+            "altname": "COOKIEEUR",
+            "nom": "COOKIE/EUR",
+            "symbole": "COOKIE"
+        },
+        {
+            "id": "COQEUR",
+            "altname": "COQEUR",
+            "nom": "COQ/EUR",
+            "symbole": "COQ"
+        },
+        {
+            "id": "COTIEUR",
+            "altname": "COTIEUR",
+            "nom": "COTI/EUR",
+            "symbole": "COTI"
+        },
+        {
+            "id": "COWEUR",
+            "altname": "COWEUR",
+            "nom": "COW/EUR",
+            "symbole": "COW"
+        },
+        {
+            "id": "CPOOLEUR",
+            "altname": "CPOOLEUR",
+            "nom": "CPOOL/EUR",
+            "symbole": "CPOOL"
+        },
+        {
+            "id": "CROEUR",
+            "altname": "CROEUR",
+            "nom": "CRO/EUR",
+            "symbole": "CRO"
+        },
+        {
+            "id": "CRVEUR",
+            "altname": "CRVEUR",
+            "nom": "CRV/EUR",
+            "symbole": "CRV"
+        },
+        {
+            "id": "CTCEUR",
+            "altname": "CTCEUR",
+            "nom": "CTC/EUR",
+            "symbole": "CTC"
+        },
+        {
+            "id": "CTSIEUR",
+            "altname": "CTSIEUR",
+            "nom": "CTSI/EUR",
+            "symbole": "CTSI"
+        },
+        {
+            "id": "CVCEUR",
+            "altname": "CVCEUR",
+            "nom": "CVC/EUR",
+            "symbole": "CVC"
+        },
+        {
+            "id": "CVXEUR",
+            "altname": "CVXEUR",
+            "nom": "CVX/EUR",
+            "symbole": "CVX"
+        },
+        {
+            "id": "CYBEREUR",
+            "altname": "CYBEREUR",
+            "nom": "CYBER/EUR",
+            "symbole": "CYBER"
+        },
+        {
+            "id": "DAGEUR",
+            "altname": "DAGEUR",
+            "nom": "DAG/EUR",
+            "symbole": "DAG"
+        },
+        {
+            "id": "DAIEUR",
+            "altname": "DAIEUR",
+            "nom": "DAI/EUR",
+            "symbole": "DAI"
+        },
+        {
+            "id": "DASHEUR",
+            "altname": "DASHEUR",
+            "nom": "DASH/EUR",
+            "symbole": "DASH"
+        },
+        {
+            "id": "DBREUR",
+            "altname": "DBREUR",
+            "nom": "DBR/EUR",
+            "symbole": "DBR"
+        },
+        {
+            "id": "DEEPEUR",
+            "altname": "DEEPEUR",
+            "nom": "DEEP/EUR",
+            "symbole": "DEEP"
+        },
+        {
+            "id": "DEGENEUR",
+            "altname": "DEGENEUR",
+            "nom": "DEGEN/EUR",
+            "symbole": "DEGEN"
+        },
+        {
+            "id": "DENTEUR",
+            "altname": "DENTEUR",
+            "nom": "DENT/EUR",
+            "symbole": "DENT"
+        },
+        {
+            "id": "DMCEUR",
+            "altname": "DMCEUR",
+            "nom": "DMC/EUR",
+            "symbole": "DMC"
+        },
+        {
+            "id": "DOGEUR",
+            "altname": "DOGEUR",
+            "nom": "DOG/EUR",
+            "symbole": "DOG"
+        },
+        {
+            "id": "DOGSEUR",
+            "altname": "DOGSEUR",
+            "nom": "DOGS/EUR",
+            "symbole": "DOGS"
+        },
+        {
+            "id": "DOLOEUR",
+            "altname": "DOLOEUR",
+            "nom": "DOLO/EUR",
+            "symbole": "DOLO"
+        },
+        {
+            "id": "DOTEUR",
+            "altname": "DOTEUR",
+            "nom": "DOT/EUR",
+            "symbole": "DOT"
+        },
+        {
+            "id": "DRIFTEUR",
+            "altname": "DRIFTEUR",
+            "nom": "DRIFT/EUR",
+            "symbole": "DRIFT"
+        },
+        {
+            "id": "DRVEUR",
+            "altname": "DRVEUR",
+            "nom": "DRV/EUR",
+            "symbole": "DRV"
+        },
+        {
+            "id": "DUALEUR",
+            "altname": "DUALEUR",
+            "nom": "DUAL/EUR",
+            "symbole": "DUAL"
+        },
+        {
+            "id": "DYDXEUR",
+            "altname": "DYDXEUR",
+            "nom": "DYDX/EUR",
+            "symbole": "DYDX"
+        },
+        {
+            "id": "DYMEUR",
+            "altname": "DYMEUR",
+            "nom": "DYM/EUR",
+            "symbole": "DYM"
+        },
+        {
+            "id": "EATEUR",
+            "altname": "EATEUR",
+            "nom": "EAT/EUR",
+            "symbole": "EAT"
+        },
+        {
+            "id": "EDGEEUR",
+            "altname": "EDGEEUR",
+            "nom": "EDGE/EUR",
+            "symbole": "EDGE"
+        },
+        {
+            "id": "EDGEXEUR",
+            "altname": "EDGEXEUR",
+            "nom": "EDGEX/EUR",
+            "symbole": "EDGEX"
+        },
+        {
+            "id": "EDUEUR",
+            "altname": "EDUEUR",
+            "nom": "EDU/EUR",
+            "symbole": "EDU"
+        },
+        {
+            "id": "EGLDEUR",
+            "altname": "EGLDEUR",
+            "nom": "EGLD/EUR",
+            "symbole": "EGLD"
+        },
+        {
+            "id": "EIGENEUR",
+            "altname": "EIGENEUR",
+            "nom": "EIGEN/EUR",
+            "symbole": "EIGEN"
+        },
+        {
+            "id": "ELIZAOSEUR",
+            "altname": "ELIZAOSEUR",
+            "nom": "ELIZAOS/EUR",
+            "symbole": "ELIZAOS"
+        },
+        {
+            "id": "ENAEUR",
+            "altname": "ENAEUR",
+            "nom": "ENA/EUR",
+            "symbole": "ENA"
+        },
+        {
+            "id": "ENJEUR",
+            "altname": "ENJEUR",
+            "nom": "ENJ/EUR",
+            "symbole": "ENJ"
+        },
+        {
+            "id": "ENSEUR",
+            "altname": "ENSEUR",
+            "nom": "ENS/EUR",
+            "symbole": "ENS"
+        },
+        {
+            "id": "ENSOEUR",
+            "altname": "ENSOEUR",
+            "nom": "ENSO/EUR",
+            "symbole": "ENSO"
+        },
+        {
+            "id": "ESEUR",
+            "altname": "ESEUR",
+            "nom": "ES/EUR",
+            "symbole": "ES"
+        },
+        {
+            "id": "ESPEUR",
+            "altname": "ESPEUR",
+            "nom": "ESP/EUR",
+            "symbole": "ESP"
+        },
+        {
+            "id": "ETHFIEUR",
+            "altname": "ETHFIEUR",
+            "nom": "ETHFI/EUR",
+            "symbole": "ETHFI"
+        },
+        {
+            "id": "EULEUR",
+            "altname": "EULEUR",
+            "nom": "EUL/EUR",
+            "symbole": "EUL"
+        },
+        {
+            "id": "EURCEUR",
+            "altname": "EURCEUR",
+            "nom": "EURC/EUR",
+            "symbole": "EURC"
+        },
+        {
+            "id": "EURCVEUR",
+            "altname": "EURCVEUR",
+            "nom": "EURCV/EUR",
+            "symbole": "EURCV"
+        },
+        {
+            "id": "EUROPEUR",
+            "altname": "EUROPEUR",
+            "nom": "EUROP/EUR",
+            "symbole": "EUROP"
+        },
+        {
+            "id": "EURQEUR",
+            "altname": "EURQEUR",
+            "nom": "EURQ/EUR",
+            "symbole": "EURQ"
+        },
+        {
+            "id": "EVEUR",
+            "altname": "EVEUR",
+            "nom": "EV/EUR",
+            "symbole": "EV"
+        },
+        {
+            "id": "EWTEUR",
+            "altname": "EWTEUR",
+            "nom": "EWT/EUR",
+            "symbole": "EWT"
+        },
+        {
+            "id": "FARTCOINEUR",
+            "altname": "FARTCOINEUR",
+            "nom": "FARTCOIN/EUR",
+            "symbole": "FARTCOIN"
+        },
+        {
+            "id": "FETEUR",
+            "altname": "FETEUR",
+            "nom": "FET/EUR",
+            "symbole": "FET"
+        },
+        {
+            "id": "FHEEUR",
+            "altname": "FHEEUR",
+            "nom": "FHE/EUR",
+            "symbole": "FHE"
+        },
+        {
+            "id": "FIDAEUR",
+            "altname": "FIDAEUR",
+            "nom": "FIDA/EUR",
+            "symbole": "FIDA"
+        },
+        {
+            "id": "FIGHTEUR",
+            "altname": "FIGHTEUR",
+            "nom": "FIGHT/EUR",
+            "symbole": "FIGHT"
+        },
+        {
+            "id": "FILEUR",
+            "altname": "FILEUR",
+            "nom": "FIL/EUR",
+            "symbole": "FIL"
+        },
+        {
+            "id": "FLOCKEUR",
+            "altname": "FLOCKEUR",
+            "nom": "FLOCK/EUR",
+            "symbole": "FLOCK"
+        },
+        {
+            "id": "FLOKIEUR",
+            "altname": "FLOKIEUR",
+            "nom": "FLOKI/EUR",
+            "symbole": "FLOKI"
+        },
+        {
+            "id": "FLOWEUR",
+            "altname": "FLOWEUR",
+            "nom": "FLOW/EUR",
+            "symbole": "FLOW"
+        },
+        {
+            "id": "FLREUR",
+            "altname": "FLREUR",
+            "nom": "FLR/EUR",
+            "symbole": "FLR"
+        },
+        {
+            "id": "FLUXEUR",
+            "altname": "FLUXEUR",
+            "nom": "FLUX/EUR",
+            "symbole": "FLUX"
+        },
+        {
+            "id": "FORTHEUR",
+            "altname": "FORTHEUR",
+            "nom": "FORTH/EUR",
+            "symbole": "FORTH"
+        },
+        {
+            "id": "FUNEUR",
+            "altname": "FUNEUR",
+            "nom": "FUN/EUR",
+            "symbole": "FUN"
+        },
+        {
+            "id": "FWOGEUR",
+            "altname": "FWOGEUR",
+            "nom": "FWOG/EUR",
+            "symbole": "FWOG"
+        },
+        {
+            "id": "FXSEUR",
+            "altname": "FXSEUR",
+            "nom": "FXS/EUR",
+            "symbole": "FXS"
+        },
+        {
+            "id": "GALAEUR",
+            "altname": "GALAEUR",
+            "nom": "GALA/EUR",
+            "symbole": "GALA"
+        },
+        {
+            "id": "GAME2EUR",
+            "altname": "GAME2EUR",
+            "nom": "GAME2/EUR",
+            "symbole": "GAME2"
+        },
+        {
+            "id": "GASEUR",
+            "altname": "GASEUR",
+            "nom": "GAS/EUR",
+            "symbole": "GAS"
+        },
+        {
+            "id": "GENIUSEUR",
+            "altname": "GENIUSEUR",
+            "nom": "GENIUS/EUR",
+            "symbole": "GENIUS"
+        },
+        {
+            "id": "GFIEUR",
+            "altname": "GFIEUR",
+            "nom": "GFI/EUR",
+            "symbole": "GFI"
+        },
+        {
+            "id": "GHSTEUR",
+            "altname": "GHSTEUR",
+            "nom": "GHST/EUR",
+            "symbole": "GHST"
+        },
+        {
+            "id": "GIGAEUR",
+            "altname": "GIGAEUR",
+            "nom": "GIGA/EUR",
+            "symbole": "GIGA"
+        },
+        {
+            "id": "GLMREUR",
+            "altname": "GLMREUR",
+            "nom": "GLMR/EUR",
+            "symbole": "GLMR"
+        },
+        {
+            "id": "GMTEUR",
+            "altname": "GMTEUR",
+            "nom": "GMT/EUR",
+            "symbole": "GMT"
+        },
+        {
+            "id": "GMXEUR",
+            "altname": "GMXEUR",
+            "nom": "GMX/EUR",
+            "symbole": "GMX"
+        },
+        {
+            "id": "GNOEUR",
+            "altname": "GNOEUR",
+            "nom": "GNO/EUR",
+            "symbole": "GNO"
+        },
+        {
+            "id": "GOATEUR",
+            "altname": "GOATEUR",
+            "nom": "GOAT/EUR",
+            "symbole": "GOAT"
+        },
+        {
+            "id": "GOMININGEUR",
+            "altname": "GOMININGEUR",
+            "nom": "GOMINING/EUR",
+            "symbole": "GOMINING"
+        },
+        {
+            "id": "GRASSEUR",
+            "altname": "GRASSEUR",
+            "nom": "GRASS/EUR",
+            "symbole": "GRASS"
+        },
+        {
+            "id": "GRIFFAINEUR",
+            "altname": "GRIFFAINEUR",
+            "nom": "GRIFFAIN/EUR",
+            "symbole": "GRIFFAIN"
+        },
+        {
+            "id": "GRTEUR",
+            "altname": "GRTEUR",
+            "nom": "GRT/EUR",
+            "symbole": "GRT"
+        },
+        {
+            "id": "GSTEUR",
+            "altname": "GSTEUR",
+            "nom": "GST/EUR",
+            "symbole": "GST"
+        },
+        {
+            "id": "GTCEUR",
+            "altname": "GTCEUR",
+            "nom": "GTC/EUR",
+            "symbole": "GTC"
+        },
+        {
+            "id": "GUNEUR",
+            "altname": "GUNEUR",
+            "nom": "GUN/EUR",
+            "symbole": "GUN"
+        },
+        {
+            "id": "HBAREUR",
+            "altname": "HBAREUR",
+            "nom": "HBAR/EUR",
+            "symbole": "HBAR"
+        },
+        {
+            "id": "HFTEUR",
+            "altname": "HFTEUR",
+            "nom": "HFT/EUR",
+            "symbole": "HFT"
+        },
+        {
+            "id": "HMSTREUR",
+            "altname": "HMSTREUR",
+            "nom": "HMSTR/EUR",
+            "symbole": "HMSTR"
+        },
+        {
+            "id": "HNTEUR",
+            "altname": "HNTEUR",
+            "nom": "HNT/EUR",
+            "symbole": "HNT"
+        },
+        {
+            "id": "HONEYEUR",
+            "altname": "HONEYEUR",
+            "nom": "HONEY/EUR",
+            "symbole": "HONEY"
+        },
+        {
+            "id": "HPOS10IEUR",
+            "altname": "HPOS10IEUR",
+            "nom": "HPOS10I/EUR",
+            "symbole": "HPOS10I"
+        },
+        {
+            "id": "HSKEUR",
+            "altname": "HSKEUR",
+            "nom": "HSK/EUR",
+            "symbole": "HSK"
+        },
+        {
+            "id": "HYPEEUR",
+            "altname": "HYPEEUR",
+            "nom": "HYPE/EUR",
+            "symbole": "HYPE"
+        },
+        {
+            "id": "IAGEUR",
+            "altname": "IAGEUR",
+            "nom": "IAG/EUR",
+            "symbole": "IAG"
+        },
+        {
+            "id": "ICNTEUR",
+            "altname": "ICNTEUR",
+            "nom": "ICNT/EUR",
+            "symbole": "ICNT"
+        },
+        {
+            "id": "ICPEUR",
+            "altname": "ICPEUR",
+            "nom": "ICP/EUR",
+            "symbole": "ICP"
+        },
+        {
+            "id": "IDOSEUR",
+            "altname": "IDOSEUR",
+            "nom": "IDOS/EUR",
+            "symbole": "IDOS"
+        },
+        {
+            "id": "IMXEUR",
+            "altname": "IMXEUR",
+            "nom": "IMX/EUR",
+            "symbole": "IMX"
+        },
+        {
+            "id": "INEUR",
+            "altname": "INEUR",
+            "nom": "IN/EUR",
+            "symbole": "IN"
+        },
+        {
+            "id": "INITEUR",
+            "altname": "INITEUR",
+            "nom": "INIT/EUR",
+            "symbole": "INIT"
+        },
+        {
+            "id": "INJEUR",
+            "altname": "INJEUR",
+            "nom": "INJ/EUR",
+            "symbole": "INJ"
+        },
+        {
+            "id": "INXEUR",
+            "altname": "INXEUR",
+            "nom": "INX/EUR",
+            "symbole": "INX"
+        },
+        {
+            "id": "IPEUR",
+            "altname": "IPEUR",
+            "nom": "IP/EUR",
+            "symbole": "IP"
+        },
+        {
+            "id": "JASMYEUR",
+            "altname": "JASMYEUR",
+            "nom": "JASMY/EUR",
+            "symbole": "JASMY"
+        },
+        {
+            "id": "JITOSOLEUR",
+            "altname": "JITOSOLEUR",
+            "nom": "JITOSOL/EUR",
+            "symbole": "JITOSOL"
+        },
+        {
+            "id": "JOEEUR",
+            "altname": "JOEEUR",
+            "nom": "JOE/EUR",
+            "symbole": "JOE"
+        },
+        {
+            "id": "JSTEUR",
+            "altname": "JSTEUR",
+            "nom": "JST/EUR",
+            "symbole": "JST"
+        },
+        {
+            "id": "JTOEUR",
+            "altname": "JTOEUR",
+            "nom": "JTO/EUR",
+            "symbole": "JTO"
+        },
+        {
+            "id": "JUPEUR",
+            "altname": "JUPEUR",
+            "nom": "JUP/EUR",
+            "symbole": "JUP"
+        },
+        {
+            "id": "KAITOEUR",
+            "altname": "KAITOEUR",
+            "nom": "KAITO/EUR",
+            "symbole": "KAITO"
+        },
+        {
+            "id": "KASEUR",
+            "altname": "KASEUR",
+            "nom": "KAS/EUR",
+            "symbole": "KAS"
+        },
+        {
+            "id": "KATEUR",
+            "altname": "KATEUR",
+            "nom": "KAT/EUR",
+            "symbole": "KAT"
+        },
+        {
+            "id": "KAVAEUR",
+            "altname": "KAVAEUR",
+            "nom": "KAVA/EUR",
+            "symbole": "KAVA"
+        },
+        {
+            "id": "KERNELEUR",
+            "altname": "KERNELEUR",
+            "nom": "KERNEL/EUR",
+            "symbole": "KERNEL"
+        },
+        {
+            "id": "KMNOEUR",
+            "altname": "KMNOEUR",
+            "nom": "KMNO/EUR",
+            "symbole": "KMNO"
+        },
+        {
+            "id": "KNCEUR",
+            "altname": "KNCEUR",
+            "nom": "KNC/EUR",
+            "symbole": "KNC"
+        },
+        {
+            "id": "KNTQEUR",
+            "altname": "KNTQEUR",
+            "nom": "KNTQ/EUR",
+            "symbole": "KNTQ"
+        },
+        {
+            "id": "KSMEUR",
+            "altname": "KSMEUR",
+            "nom": "KSM/EUR",
+            "symbole": "KSM"
+        },
+        {
+            "id": "KTAEUR",
+            "altname": "KTAEUR",
+            "nom": "KTA/EUR",
+            "symbole": "KTA"
+        },
+        {
+            "id": "KULAEUR",
+            "altname": "KULAEUR",
+            "nom": "KULA/EUR",
+            "symbole": "KULA"
+        },
+        {
+            "id": "LAVAEUR",
+            "altname": "LAVAEUR",
+            "nom": "LAVA/EUR",
+            "symbole": "LAVA"
+        },
+        {
+            "id": "LAYEREUR",
+            "altname": "LAYEREUR",
+            "nom": "LAYER/EUR",
+            "symbole": "LAYER"
+        },
+        {
+            "id": "LCAPEUR",
+            "altname": "LCAPEUR",
+            "nom": "LCAP/EUR",
+            "symbole": "LCAP"
+        },
+        {
+            "id": "LCXEUR",
+            "altname": "LCXEUR",
+            "nom": "LCX/EUR",
+            "symbole": "LCX"
+        },
+        {
+            "id": "LDOEUR",
+            "altname": "LDOEUR",
+            "nom": "LDO/EUR",
+            "symbole": "LDO"
+        },
+        {
+            "id": "LINEAEUR",
+            "altname": "LINEAEUR",
+            "nom": "LINEA/EUR",
+            "symbole": "LINEA"
+        },
+        {
+            "id": "LINKEUR",
+            "altname": "LINKEUR",
+            "nom": "LINK/EUR",
+            "symbole": "LINK"
+        },
+        {
+            "id": "LIONEUR",
+            "altname": "LIONEUR",
+            "nom": "LION/EUR",
+            "symbole": "LION"
+        },
+        {
+            "id": "LITEUR",
+            "altname": "LITEUR",
+            "nom": "LIT/EUR",
+            "symbole": "LIT"
+        },
+        {
+            "id": "LMWREUR",
+            "altname": "LMWREUR",
+            "nom": "LMWR/EUR",
+            "symbole": "LMWR"
+        },
+        {
+            "id": "LOFIEUR",
+            "altname": "LOFIEUR",
+            "nom": "LOFI/EUR",
+            "symbole": "LOFI"
+        },
+        {
+            "id": "LPTEUR",
+            "altname": "LPTEUR",
+            "nom": "LPT/EUR",
+            "symbole": "LPT"
+        },
+        {
+            "id": "LQTYEUR",
+            "altname": "LQTYEUR",
+            "nom": "LQTY/EUR",
+            "symbole": "LQTY"
+        },
+        {
+            "id": "LRCEUR",
+            "altname": "LRCEUR",
+            "nom": "LRC/EUR",
+            "symbole": "LRC"
+        },
+        {
+            "id": "LSKEUR",
+            "altname": "LSKEUR",
+            "nom": "LSK/EUR",
+            "symbole": "LSK"
+        },
+        {
+            "id": "LSSOLEUR",
+            "altname": "LSSOLEUR",
+            "nom": "LSSOL/EUR",
+            "symbole": "LSSOL"
+        },
+        {
+            "id": "LUNAEUR",
+            "altname": "LUNAEUR",
+            "nom": "LUNA/EUR",
+            "symbole": "LUNA"
+        },
+        {
+            "id": "MANAEUR",
+            "altname": "MANAEUR",
+            "nom": "MANA/EUR",
+            "symbole": "MANA"
+        },
+        {
+            "id": "MANTRAEUR",
+            "altname": "MANTRAEUR",
+            "nom": "MANTRA/EUR",
+            "symbole": "MANTRA"
+        },
+        {
+            "id": "MASKEUR",
+            "altname": "MASKEUR",
+            "nom": "MASK/EUR",
+            "symbole": "MASK"
+        },
+        {
+            "id": "MEEUR",
+            "altname": "MEEUR",
+            "nom": "ME/EUR",
+            "symbole": "ME"
+        },
+        {
+            "id": "MEGAEUR",
+            "altname": "MEGAEUR",
+            "nom": "MEGA/EUR",
+            "symbole": "MEGA"
+        },
+        {
+            "id": "MELANIAEUR",
+            "altname": "MELANIAEUR",
+            "nom": "MELANIA/EUR",
+            "symbole": "MELANIA"
+        },
+        {
+            "id": "MEMEEUR",
+            "altname": "MEMEEUR",
+            "nom": "MEME/EUR",
+            "symbole": "MEME"
+        },
+        {
+            "id": "MERLEUR",
+            "altname": "MERLEUR",
+            "nom": "MERL/EUR",
+            "symbole": "MERL"
+        },
+        {
+            "id": "METEUR",
+            "altname": "METEUR",
+            "nom": "MET/EUR",
+            "symbole": "MET"
+        },
+        {
+            "id": "METISEUR",
+            "altname": "METISEUR",
+            "nom": "METIS/EUR",
+            "symbole": "METIS"
+        },
+        {
+            "id": "MEWEUR",
+            "altname": "MEWEUR",
+            "nom": "MEW/EUR",
+            "symbole": "MEW"
+        },
+        {
+            "id": "MFEUR",
+            "altname": "MFEUR",
+            "nom": "MF/EUR",
+            "symbole": "MF"
+        },
+        {
+            "id": "MIMEUR",
+            "altname": "MIMEUR",
+            "nom": "MIM/EUR",
+            "symbole": "MIM"
+        },
+        {
+            "id": "MINAEUR",
+            "altname": "MINAEUR",
+            "nom": "MINA/EUR",
+            "symbole": "MINA"
+        },
+        {
+            "id": "MIRAEUR",
+            "altname": "MIRAEUR",
+            "nom": "MIRA/EUR",
+            "symbole": "MIRA"
+        },
+        {
+            "id": "MNTEUR",
+            "altname": "MNTEUR",
+            "nom": "MNT/EUR",
+            "symbole": "MNT"
+        },
+        {
+            "id": "MOCAEUR",
+            "altname": "MOCAEUR",
+            "nom": "MOCA/EUR",
+            "symbole": "MOCA"
+        },
+        {
+            "id": "MOGEUR",
+            "altname": "MOGEUR",
+            "nom": "MOG/EUR",
+            "symbole": "MOG"
+        },
+        {
+            "id": "MONEUR",
+            "altname": "MONEUR",
+            "nom": "MON/EUR",
+            "symbole": "MON"
+        },
+        {
+            "id": "MOODENGEUR",
+            "altname": "MOODENGEUR",
+            "nom": "MOODENG/EUR",
+            "symbole": "MOODENG"
+        },
+        {
+            "id": "MORPHOEUR",
+            "altname": "MORPHOEUR",
+            "nom": "MORPHO/EUR",
+            "symbole": "MORPHO"
+        },
+        {
+            "id": "MOVREUR",
+            "altname": "MOVREUR",
+            "nom": "MOVR/EUR",
+            "symbole": "MOVR"
+        },
+        {
+            "id": "MSOLEUR",
+            "altname": "MSOLEUR",
+            "nom": "MSOL/EUR",
+            "symbole": "MSOL"
+        },
+        {
+            "id": "MYXEUR",
+            "altname": "MYXEUR",
+            "nom": "MYX/EUR",
+            "symbole": "MYX"
+        },
+        {
+            "id": "NANOEUR",
+            "altname": "NANOEUR",
+            "nom": "NANO/EUR",
+            "symbole": "NANO"
+        },
+        {
+            "id": "NEAREUR",
+            "altname": "NEAREUR",
+            "nom": "NEAR/EUR",
+            "symbole": "NEAR"
+        },
+        {
+            "id": "NEIROEUR",
+            "altname": "NEIROEUR",
+            "nom": "NEIRO/EUR",
+            "symbole": "NEIRO"
+        },
+        {
+            "id": "NEOEUR",
+            "altname": "NEOEUR",
+            "nom": "NEO/EUR",
+            "symbole": "NEO"
+        },
+        {
+            "id": "NEXEUR",
+            "altname": "NEXEUR",
+            "nom": "NEX/EUR",
+            "symbole": "NEX"
+        },
+        {
+            "id": "NIGHTEUR",
+            "altname": "NIGHTEUR",
+            "nom": "NIGHT/EUR",
+            "symbole": "NIGHT"
+        },
+        {
+            "id": "NILEUR",
+            "altname": "NILEUR",
+            "nom": "NIL/EUR",
+            "symbole": "NIL"
+        },
+        {
+            "id": "NMREUR",
+            "altname": "NMREUR",
+            "nom": "NMR/EUR",
+            "symbole": "NMR"
+        },
+        {
+            "id": "NOSEUR",
+            "altname": "NOSEUR",
+            "nom": "NOS/EUR",
+            "symbole": "NOS"
+        },
+        {
+            "id": "NOTEUR",
+            "altname": "NOTEUR",
+            "nom": "NOT/EUR",
+            "symbole": "NOT"
+        },
+        {
+            "id": "NPCEUR",
+            "altname": "NPCEUR",
+            "nom": "NPC/EUR",
+            "symbole": "NPC"
+        },
+        {
+            "id": "OCEANEUR",
+            "altname": "OCEANEUR",
+            "nom": "OCEAN/EUR",
+            "symbole": "OCEAN"
+        },
+        {
+            "id": "OGNEUR",
+            "altname": "OGNEUR",
+            "nom": "OGN/EUR",
+            "symbole": "OGN"
+        },
+        {
+            "id": "OMGEUR",
+            "altname": "OMGEUR",
+            "nom": "OMG/EUR",
+            "symbole": "OMG"
+        },
+        {
+            "id": "OMIEUR",
+            "altname": "OMIEUR",
+            "nom": "OMI/EUR",
+            "symbole": "OMI"
+        },
+        {
+            "id": "ONDOEUR",
+            "altname": "ONDOEUR",
+            "nom": "ONDO/EUR",
+            "symbole": "ONDO"
+        },
+        {
+            "id": "OOBEUR",
+            "altname": "OOBEUR",
+            "nom": "OOB/EUR",
+            "symbole": "OOB"
+        },
+        {
+            "id": "OPENEUR",
+            "altname": "OPENEUR",
+            "nom": "OPEN/EUR",
+            "symbole": "OPEN"
+        },
+        {
+            "id": "OPEUR",
+            "altname": "OPEUR",
+            "nom": "OP/EUR",
+            "symbole": "OP"
+        },
+        {
+            "id": "ORCAEUR",
+            "altname": "ORCAEUR",
+            "nom": "ORCA/EUR",
+            "symbole": "ORCA"
+        },
+        {
+            "id": "OSMOEUR",
+            "altname": "OSMOEUR",
+            "nom": "OSMO/EUR",
+            "symbole": "OSMO"
+        },
+        {
+            "id": "OXTEUR",
+            "altname": "OXTEUR",
+            "nom": "OXT/EUR",
+            "symbole": "OXT"
+        },
+        {
+            "id": "PARTIEUR",
+            "altname": "PARTIEUR",
+            "nom": "PARTI/EUR",
+            "symbole": "PARTI"
+        },
+        {
+            "id": "PAXGEUR",
+            "altname": "PAXGEUR",
+            "nom": "PAXG/EUR",
+            "symbole": "PAXG"
+        },
+        {
+            "id": "PEAQEUR",
+            "altname": "PEAQEUR",
+            "nom": "PEAQ/EUR",
+            "symbole": "PEAQ"
+        },
+        {
+            "id": "PENDLEEUR",
+            "altname": "PENDLEEUR",
+            "nom": "PENDLE/EUR",
+            "symbole": "PENDLE"
+        },
+        {
+            "id": "PENGUEUR",
+            "altname": "PENGUEUR",
+            "nom": "PENGU/EUR",
+            "symbole": "PENGU"
+        },
+        {
+            "id": "PEPEEUR",
+            "altname": "PEPEEUR",
+            "nom": "PEPE/EUR",
+            "symbole": "PEPE"
+        },
+        {
+            "id": "PEPEUR",
+            "altname": "PEPEUR",
+            "nom": "PEP/EUR",
+            "symbole": "PEP"
+        },
+        {
+            "id": "PERPEUR",
+            "altname": "PERPEUR",
+            "nom": "PERP/EUR",
+            "symbole": "PERP"
+        },
+        {
+            "id": "PHAEUR",
+            "altname": "PHAEUR",
+            "nom": "PHA/EUR",
+            "symbole": "PHA"
+        },
+        {
+            "id": "PIEUR",
+            "altname": "PIEUR",
+            "nom": "PI/EUR",
+            "symbole": "PI"
+        },
+        {
+            "id": "PIPEEUR",
+            "altname": "PIPEEUR",
+            "nom": "PIPE/EUR",
+            "symbole": "PIPE"
+        },
+        {
+            "id": "PLAYEUR",
+            "altname": "PLAYEUR",
+            "nom": "PLAY/EUR",
+            "symbole": "PLAY"
+        },
+        {
+            "id": "PLUMEEUR",
+            "altname": "PLUMEEUR",
+            "nom": "PLUME/EUR",
+            "symbole": "PLUME"
+        },
+        {
+            "id": "PNUTEUR",
+            "altname": "PNUTEUR",
+            "nom": "PNUT/EUR",
+            "symbole": "PNUT"
+        },
+        {
+            "id": "POLEUR",
+            "altname": "POLEUR",
+            "nom": "POL/EUR",
+            "symbole": "POL"
+        },
+        {
+            "id": "POLISEUR",
+            "altname": "POLISEUR",
+            "nom": "POLIS/EUR",
+            "symbole": "POLIS"
+        },
+        {
+            "id": "POLSEUR",
+            "altname": "POLSEUR",
+            "nom": "POLS/EUR",
+            "symbole": "POLS"
+        },
+        {
+            "id": "PONDEUR",
+            "altname": "PONDEUR",
+            "nom": "POND/EUR",
+            "symbole": "POND"
+        },
+        {
+            "id": "PONKEEUR",
+            "altname": "PONKEEUR",
+            "nom": "PONKE/EUR",
+            "symbole": "PONKE"
+        },
+        {
+            "id": "POPCATEUR",
+            "altname": "POPCATEUR",
+            "nom": "POPCAT/EUR",
+            "symbole": "POPCAT"
+        },
+        {
+            "id": "PORTALEUR",
+            "altname": "PORTALEUR",
+            "nom": "PORTAL/EUR",
+            "symbole": "PORTAL"
+        },
+        {
+            "id": "POWREUR",
+            "altname": "POWREUR",
+            "nom": "POWR/EUR",
+            "symbole": "POWR"
+        },
+        {
+            "id": "PRCLEUR",
+            "altname": "PRCLEUR",
+            "nom": "PRCL/EUR",
+            "symbole": "PRCL"
+        },
+        {
+            "id": "PRIMEEUR",
+            "altname": "PRIMEEUR",
+            "nom": "PRIME/EUR",
+            "symbole": "PRIME"
+        },
+        {
+            "id": "PROEUR",
+            "altname": "PROEUR",
+            "nom": "PRO/EUR",
+            "symbole": "PRO"
+        },
+        {
+            "id": "PROMPTEUR",
+            "altname": "PROMPTEUR",
+            "nom": "PROMPT/EUR",
+            "symbole": "PROMPT"
+        },
+        {
+            "id": "PROSEUR",
+            "altname": "PROSEUR",
+            "nom": "PROS/EUR",
+            "symbole": "PROS"
+        },
+        {
+            "id": "PROVEEUR",
+            "altname": "PROVEEUR",
+            "nom": "PROVE/EUR",
+            "symbole": "PROVE"
+        },
+        {
+            "id": "PTBEUR",
+            "altname": "PTBEUR",
+            "nom": "PTB/EUR",
+            "symbole": "PTB"
+        },
+        {
+            "id": "PUFFEREUR",
+            "altname": "PUFFEREUR",
+            "nom": "PUFFER/EUR",
+            "symbole": "PUFFER"
+        },
+        {
+            "id": "PUMPEUR",
+            "altname": "PUMPEUR",
+            "nom": "PUMP/EUR",
+            "symbole": "PUMP"
+        },
+        {
+            "id": "PUPSEUR",
+            "altname": "PUPSEUR",
+            "nom": "PUPS/EUR",
+            "symbole": "PUPS"
+        },
+        {
+            "id": "PYTHEUR",
+            "altname": "PYTHEUR",
+            "nom": "PYTH/EUR",
+            "symbole": "PYTH"
+        },
+        {
+            "id": "QEUR",
+            "altname": "QEUR",
+            "nom": "Q/EUR",
+            "symbole": "Q"
+        },
+        {
+            "id": "QNTEUR",
+            "altname": "QNTEUR",
+            "nom": "QNT/EUR",
+            "symbole": "QNT"
+        },
+        {
+            "id": "QTUMEUR",
+            "altname": "QTUMEUR",
+            "nom": "QTUM/EUR",
+            "symbole": "QTUM"
+        },
+        {
+            "id": "QUAIEUR",
+            "altname": "QUAIEUR",
+            "nom": "QUAI/EUR",
+            "symbole": "QUAI"
+        },
+        {
+            "id": "RADEUR",
+            "altname": "RADEUR",
+            "nom": "RAD/EUR",
+            "symbole": "RAD"
+        },
+        {
+            "id": "RAILSEUR",
+            "altname": "RAILSEUR",
+            "nom": "RAILS/EUR",
+            "symbole": "RAILS"
+        },
+        {
+            "id": "RAREEUR",
+            "altname": "RAREEUR",
+            "nom": "RARE/EUR",
+            "symbole": "RARE"
+        },
+        {
+            "id": "RARIEUR",
+            "altname": "RARIEUR",
+            "nom": "RARI/EUR",
+            "symbole": "RARI"
+        },
+        {
+            "id": "RAYEUR",
+            "altname": "RAYEUR",
+            "nom": "RAY/EUR",
+            "symbole": "RAY"
+        },
+        {
+            "id": "REDEUR",
+            "altname": "REDEUR",
+            "nom": "RED/EUR",
+            "symbole": "RED"
+        },
+        {
+            "id": "REKTEUR",
+            "altname": "REKTEUR",
+            "nom": "REKT/EUR",
+            "symbole": "REKT"
+        },
+        {
+            "id": "RENDEREUR",
+            "altname": "RENDEREUR",
+            "nom": "RENDER/EUR",
+            "symbole": "RENDER"
+        },
+        {
+            "id": "RENEUR",
+            "altname": "RENEUR",
+            "nom": "REN/EUR",
+            "symbole": "REN"
+        },
+        {
+            "id": "REPPOEUR",
+            "altname": "REPPOEUR",
+            "nom": "REPPO/EUR",
+            "symbole": "REPPO"
+        },
+        {
+            "id": "REQEUR",
+            "altname": "REQEUR",
+            "nom": "REQ/EUR",
+            "symbole": "REQ"
+        },
+        {
+            "id": "REZEUR",
+            "altname": "REZEUR",
+            "nom": "REZ/EUR",
+            "symbole": "REZ"
+        },
+        {
+            "id": "RIVEREUR",
+            "altname": "RIVEREUR",
+            "nom": "RIVER/EUR",
+            "symbole": "RIVER"
+        },
+        {
+            "id": "RLCEUR",
+            "altname": "RLCEUR",
+            "nom": "RLC/EUR",
+            "symbole": "RLC"
+        },
+        {
+            "id": "RLSEUR",
+            "altname": "RLSEUR",
+            "nom": "RLS/EUR",
+            "symbole": "RLS"
+        },
+        {
+            "id": "ROLLEUR",
+            "altname": "ROLLEUR",
+            "nom": "ROLL/EUR",
+            "symbole": "ROLL"
+        },
+        {
+            "id": "RPLEUR",
+            "altname": "RPLEUR",
+            "nom": "RPL/EUR",
+            "symbole": "RPL"
+        },
+        {
+            "id": "RSCEUR",
+            "altname": "RSCEUR",
+            "nom": "RSC/EUR",
+            "symbole": "RSC"
+        },
+        {
+            "id": "RSREUR",
+            "altname": "RSREUR",
+            "nom": "RSR/EUR",
+            "symbole": "RSR"
+        },
+        {
+            "id": "RUJIEUR",
+            "altname": "RUJIEUR",
+            "nom": "RUJI/EUR",
+            "symbole": "RUJI"
+        },
+        {
+            "id": "RUNEEUR",
+            "altname": "RUNEEUR",
+            "nom": "RUNE/EUR",
+            "symbole": "RUNE"
+        },
+        {
+            "id": "SAFEEUR",
+            "altname": "SAFEEUR",
+            "nom": "SAFE/EUR",
+            "symbole": "SAFE"
+        },
+        {
+            "id": "SAGAEUR",
+            "altname": "SAGAEUR",
+            "nom": "SAGA/EUR",
+            "symbole": "SAGA"
+        },
+        {
+            "id": "SAHARAEUR",
+            "altname": "SAHARAEUR",
+            "nom": "SAHARA/EUR",
+            "symbole": "SAHARA"
+        },
+        {
+            "id": "SAMOEUR",
+            "altname": "SAMOEUR",
+            "nom": "SAMO/EUR",
+            "symbole": "SAMO"
+        },
+        {
+            "id": "SANDEUR",
+            "altname": "SANDEUR",
+            "nom": "SAND/EUR",
+            "symbole": "SAND"
+        },
+        {
+            "id": "SAPIENEUR",
+            "altname": "SAPIENEUR",
+            "nom": "SAPIEN/EUR",
+            "symbole": "SAPIEN"
+        },
+        {
+            "id": "SAUCEEUR",
+            "altname": "SAUCEEUR",
+            "nom": "SAUCE/EUR",
+            "symbole": "SAUCE"
+        },
+        {
+            "id": "SCEUR",
+            "altname": "SCEUR",
+            "nom": "SC/EUR",
+            "symbole": "SC"
+        },
+        {
+            "id": "SCOREUR",
+            "altname": "SCOREUR",
+            "nom": "SCOR/EUR",
+            "symbole": "SCOR"
+        },
+        {
+            "id": "SCRTEUR",
+            "altname": "SCRTEUR",
+            "nom": "SCRT/EUR",
+            "symbole": "SCRT"
+        },
+        {
+            "id": "SEIEUR",
+            "altname": "SEIEUR",
+            "nom": "SEI/EUR",
+            "symbole": "SEI"
+        },
+        {
+            "id": "SENTEUR",
+            "altname": "SENTEUR",
+            "nom": "SENT/EUR",
+            "symbole": "SENT"
+        },
+        {
+            "id": "SEUR",
+            "altname": "SEUR",
+            "nom": "S/EUR",
+            "symbole": "S"
+        },
+        {
+            "id": "SGBEUR",
+            "altname": "SGBEUR",
+            "nom": "SGB/EUR",
+            "symbole": "SGB"
+        },
+        {
+            "id": "SHIBEUR",
+            "altname": "SHIBEUR",
+            "nom": "SHIB/EUR",
+            "symbole": "SHIB"
+        },
+        {
+            "id": "SHXEUR",
+            "altname": "SHXEUR",
+            "nom": "SHX/EUR",
+            "symbole": "SHX"
+        },
+        {
+            "id": "SIGMAEUR",
+            "altname": "SIGMAEUR",
+            "nom": "SIGMA/EUR",
+            "symbole": "SIGMA"
+        },
+        {
+            "id": "SIGNEUR",
+            "altname": "SIGNEUR",
+            "nom": "SIGN/EUR",
+            "symbole": "SIGN"
+        },
+        {
+            "id": "SKREUR",
+            "altname": "SKREUR",
+            "nom": "SKR/EUR",
+            "symbole": "SKR"
+        },
+        {
+            "id": "SKYEUR",
+            "altname": "SKYEUR",
+            "nom": "SKY/EUR",
+            "symbole": "SKY"
+        },
+        {
+            "id": "SLXEUR",
+            "altname": "SLXEUR",
+            "nom": "SLX/EUR",
+            "symbole": "SLX"
+        },
+        {
+            "id": "SNEKEUR",
+            "altname": "SNEKEUR",
+            "nom": "SNEK/EUR",
+            "symbole": "SNEK"
+        },
+        {
+            "id": "SNXEUR",
+            "altname": "SNXEUR",
+            "nom": "SNX/EUR",
+            "symbole": "SNX"
+        },
+        {
+            "id": "SOLEUR",
+            "altname": "SOLEUR",
+            "nom": "SOL/EUR",
+            "symbole": "SOL"
+        },
+        {
+            "id": "SOLVEUR",
+            "altname": "SOLVEUR",
+            "nom": "SOLV/EUR",
+            "symbole": "SOLV"
+        },
+        {
+            "id": "SOMIEUR",
+            "altname": "SOMIEUR",
+            "nom": "SOMI/EUR",
+            "symbole": "SOMI"
+        },
+        {
+            "id": "SOONEUR",
+            "altname": "SOONEUR",
+            "nom": "SOON/EUR",
+            "symbole": "SOON"
+        },
+        {
+            "id": "SOSOEUR",
+            "altname": "SOSOEUR",
+            "nom": "SOSO/EUR",
+            "symbole": "SOSO"
+        },
+        {
+            "id": "SPACEEUR",
+            "altname": "SPACEEUR",
+            "nom": "SPACE/EUR",
+            "symbole": "SPACE"
+        },
+        {
+            "id": "SPELLEUR",
+            "altname": "SPELLEUR",
+            "nom": "SPELL/EUR",
+            "symbole": "SPELL"
+        },
+        {
+            "id": "SPKEUR",
+            "altname": "SPKEUR",
+            "nom": "SPK/EUR",
+            "symbole": "SPK"
+        },
+        {
+            "id": "SPXEUR",
+            "altname": "SPXEUR",
+            "nom": "SPX/EUR",
+            "symbole": "SPX"
+        },
+        {
+            "id": "SRMEUR",
+            "altname": "SRMEUR",
+            "nom": "SRM/EUR",
+            "symbole": "SRM"
+        },
+        {
+            "id": "SSVEUR",
+            "altname": "SSVEUR",
+            "nom": "SSV/EUR",
+            "symbole": "SSV"
+        },
+        {
+            "id": "STBLEUR",
+            "altname": "STBLEUR",
+            "nom": "STBL/EUR",
+            "symbole": "STBL"
+        },
+        {
+            "id": "STEUR",
+            "altname": "STEUR",
+            "nom": "ST/EUR",
+            "symbole": "ST"
+        },
+        {
+            "id": "STGEUR",
+            "altname": "STGEUR",
+            "nom": "STG/EUR",
+            "symbole": "STG"
+        },
+        {
+            "id": "STORJEUR",
+            "altname": "STORJEUR",
+            "nom": "STORJ/EUR",
+            "symbole": "STORJ"
+        },
+        {
+            "id": "STRKEUR",
+            "altname": "STRKEUR",
+            "nom": "STRK/EUR",
+            "symbole": "STRK"
+        },
+        {
+            "id": "STXEUR",
+            "altname": "STXEUR",
+            "nom": "STX/EUR",
+            "symbole": "STX"
+        },
+        {
+            "id": "SUIEUR",
+            "altname": "SUIEUR",
+            "nom": "SUI/EUR",
+            "symbole": "SUI"
+        },
+        {
+            "id": "SUKUEUR",
+            "altname": "SUKUEUR",
+            "nom": "SUKU/EUR",
+            "symbole": "SUKU"
+        },
+        {
+            "id": "SUNDOGEUR",
+            "altname": "SUNDOGEUR",
+            "nom": "SUNDOG/EUR",
+            "symbole": "SUNDOG"
+        },
+        {
+            "id": "SUNEUR",
+            "altname": "SUNEUR",
+            "nom": "SUN/EUR",
+            "symbole": "SUN"
+        },
+        {
+            "id": "SUPEREUR",
+            "altname": "SUPEREUR",
+            "nom": "SUPER/EUR",
+            "symbole": "SUPER"
+        },
+        {
+            "id": "SUPEUR",
+            "altname": "SUPEUR",
+            "nom": "SUP/EUR",
+            "symbole": "SUP"
+        },
+        {
+            "id": "SUSHIEUR",
+            "altname": "SUSHIEUR",
+            "nom": "SUSHI/EUR",
+            "symbole": "SUSHI"
+        },
+        {
+            "id": "SWARMSEUR",
+            "altname": "SWARMSEUR",
+            "nom": "SWARMS/EUR",
+            "symbole": "SWARMS"
+        },
+        {
+            "id": "SWEATEUR",
+            "altname": "SWEATEUR",
+            "nom": "SWEAT/EUR",
+            "symbole": "SWEAT"
+        },
+        {
+            "id": "SWELLEUR",
+            "altname": "SWELLEUR",
+            "nom": "SWELL/EUR",
+            "symbole": "SWELL"
+        },
+        {
+            "id": "SXTEUR",
+            "altname": "SXTEUR",
+            "nom": "SXT/EUR",
+            "symbole": "SXT"
+        },
+        {
+            "id": "SYNDEUR",
+            "altname": "SYNDEUR",
+            "nom": "SYND/EUR",
+            "symbole": "SYND"
+        },
+        {
+            "id": "SYNEUR",
+            "altname": "SYNEUR",
+            "nom": "SYN/EUR",
+            "symbole": "SYN"
+        },
+        {
+            "id": "SYRUPEUR",
+            "altname": "SYRUPEUR",
+            "nom": "SYRUP/EUR",
+            "symbole": "SYRUP"
+        },
+        {
+            "id": "TAKEEUR",
+            "altname": "TAKEEUR",
+            "nom": "TAKE/EUR",
+            "symbole": "TAKE"
+        },
+        {
+            "id": "TAOEUR",
+            "altname": "TAOEUR",
+            "nom": "TAO/EUR",
+            "symbole": "TAO"
+        },
+        {
+            "id": "TBTCEUR",
+            "altname": "TBTCEUR",
+            "nom": "TBTC/EUR",
+            "symbole": "TBTC"
+        },
+        {
+            "id": "TELEUR",
+            "altname": "TELEUR",
+            "nom": "TEL/EUR",
+            "symbole": "TEL"
+        },
+        {
+            "id": "TEUR",
+            "altname": "TEUR",
+            "nom": "T/EUR",
+            "symbole": "T"
+        },
+        {
+            "id": "THQEUR",
+            "altname": "THQEUR",
+            "nom": "THQ/EUR",
+            "symbole": "THQ"
+        },
+        {
+            "id": "TIAEUR",
+            "altname": "TIAEUR",
+            "nom": "TIA/EUR",
+            "symbole": "TIA"
+        },
+        {
+            "id": "TLMEUR",
+            "altname": "TLMEUR",
+            "nom": "TLM/EUR",
+            "symbole": "TLM"
+        },
+        {
+            "id": "TNSREUR",
+            "altname": "TNSREUR",
+            "nom": "TNSR/EUR",
+            "symbole": "TNSR"
+        },
+        {
+            "id": "TOKENEUR",
+            "altname": "TOKENEUR",
+            "nom": "TOKEN/EUR",
+            "symbole": "TOKEN"
+        },
+        {
+            "id": "TONEUR",
+            "altname": "TONEUR",
+            "nom": "TON/EUR",
+            "symbole": "TON"
+        },
+        {
+            "id": "TOSHIEUR",
+            "altname": "TOSHIEUR",
+            "nom": "TOSHI/EUR",
+            "symbole": "TOSHI"
+        },
+        {
+            "id": "TRACEUR",
+            "altname": "TRACEUR",
+            "nom": "TRAC/EUR",
+            "symbole": "TRAC"
+        },
+        {
+            "id": "TREEEUR",
+            "altname": "TREEEUR",
+            "nom": "TREE/EUR",
+            "symbole": "TREE"
+        },
+        {
+            "id": "TRIAEUR",
+            "altname": "TRIAEUR",
+            "nom": "TRIA/EUR",
+            "symbole": "TRIA"
+        },
+        {
+            "id": "TRUEUR",
+            "altname": "TRUEUR",
+            "nom": "TRU/EUR",
+            "symbole": "TRU"
+        },
+        {
+            "id": "TRUMPEUR",
+            "altname": "TRUMPEUR",
+            "nom": "TRUMP/EUR",
+            "symbole": "TRUMP"
+        },
+        {
+            "id": "TRUSTEUR",
+            "altname": "TRUSTEUR",
+            "nom": "TRUST/EUR",
+            "symbole": "TRUST"
+        },
+        {
+            "id": "TRXEUR",
+            "altname": "TRXEUR",
+            "nom": "TRX/EUR",
+            "symbole": "TRX"
+        },
+        {
+            "id": "TURBOEUR",
+            "altname": "TURBOEUR",
+            "nom": "TURBO/EUR",
+            "symbole": "TURBO"
+        },
+        {
+            "id": "TXEUR",
+            "altname": "TXEUR",
+            "nom": "TX/EUR",
+            "symbole": "TX"
+        },
+        {
+            "id": "UAIEUR",
+            "altname": "UAIEUR",
+            "nom": "UAI/EUR",
+            "symbole": "UAI"
+        },
+        {
+            "id": "UFDEUR",
+            "altname": "UFDEUR",
+            "nom": "UFD/EUR",
+            "symbole": "UFD"
+        },
+        {
+            "id": "UMAEUR",
+            "altname": "UMAEUR",
+            "nom": "UMA/EUR",
+            "symbole": "UMA"
+        },
+        {
+            "id": "UNFIEUR",
+            "altname": "UNFIEUR",
+            "nom": "UNFI/EUR",
+            "symbole": "UNFI"
+        },
+        {
+            "id": "UNIEUR",
+            "altname": "UNIEUR",
+            "nom": "UNI/EUR",
+            "symbole": "UNI"
+        },
+        {
+            "id": "UPEUR",
+            "altname": "UPEUR",
+            "nom": "UP/EUR",
+            "symbole": "UP"
+        },
+        {
+            "id": "USDCEUR",
+            "altname": "USDCEUR",
+            "nom": "USDC/EUR",
+            "symbole": "USDC"
+        },
+        {
+            "id": "USDDEUR",
+            "altname": "USDDEUR",
+            "nom": "USDD/EUR",
+            "symbole": "USDD"
+        },
+        {
+            "id": "USDEEUR",
+            "altname": "USDEEUR",
+            "nom": "USDE/EUR",
+            "symbole": "USDE"
+        },
+        {
+            "id": "USDSEUR",
+            "altname": "USDSEUR",
+            "nom": "USDS/EUR",
+            "symbole": "USDS"
+        },
+        {
+            "id": "USDTEUR",
+            "altname": "USDTEUR",
+            "nom": "USDT/EUR",
+            "symbole": "USDT"
+        },
+        {
+            "id": "USDUCEUR",
+            "altname": "USDUCEUR",
+            "nom": "USDUC/EUR",
+            "symbole": "USDUC"
+        },
+        {
+            "id": "USELESSEUR",
+            "altname": "USELESSEUR",
+            "nom": "USELESS/EUR",
+            "symbole": "USELESS"
+        },
+        {
+            "id": "USEUR",
+            "altname": "USEUR",
+            "nom": "US/EUR",
+            "symbole": "US"
+        },
+        {
+            "id": "USUALEUR",
+            "altname": "USUALEUR",
+            "nom": "USUAL/EUR",
+            "symbole": "USUAL"
+        },
+        {
+            "id": "VELOEUR",
+            "altname": "VELOEUR",
+            "nom": "VELO/EUR",
+            "symbole": "VELO"
+        },
+        {
+            "id": "VETEUR",
+            "altname": "VETEUR",
+            "nom": "VET/EUR",
+            "symbole": "VET"
+        },
+        {
+            "id": "VFYEUR",
+            "altname": "VFYEUR",
+            "nom": "VFY/EUR",
+            "symbole": "VFY"
+        },
+        {
+            "id": "VINEEUR",
+            "altname": "VINEEUR",
+            "nom": "VINE/EUR",
+            "symbole": "VINE"
+        },
+        {
+            "id": "VIRTUALEUR",
+            "altname": "VIRTUALEUR",
+            "nom": "VIRTUAL/EUR",
+            "symbole": "VIRTUAL"
+        },
+        {
+            "id": "VSNEUR",
+            "altname": "VSNEUR",
+            "nom": "VSN/EUR",
+            "symbole": "VSN"
+        },
+        {
+            "id": "VTHOEUR",
+            "altname": "VTHOEUR",
+            "nom": "VTHO/EUR",
+            "symbole": "VTHO"
+        },
+        {
+            "id": "VVVEUR",
+            "altname": "VVVEUR",
+            "nom": "VVV/EUR",
+            "symbole": "VVV"
+        },
+        {
+            "id": "WALEUR",
+            "altname": "WALEUR",
+            "nom": "WAL/EUR",
+            "symbole": "WAL"
+        },
+        {
+            "id": "WARDEUR",
+            "altname": "WARDEUR",
+            "nom": "WARD/EUR",
+            "symbole": "WARD"
+        },
+        {
+            "id": "WAXLEUR",
+            "altname": "WAXLEUR",
+            "nom": "WAXL/EUR",
+            "symbole": "WAXL"
+        },
+        {
+            "id": "WBTCEUR",
+            "altname": "WBTCEUR",
+            "nom": "WBTC/EUR",
+            "symbole": "WBTC"
+        },
+        {
+            "id": "WBTEUR",
+            "altname": "WBTEUR",
+            "nom": "WBT/EUR",
+            "symbole": "WBT"
+        },
+        {
+            "id": "WCTEUR",
+            "altname": "WCTEUR",
+            "nom": "WCT/EUR",
+            "symbole": "WCT"
+        },
+        {
+            "id": "WELLEUR",
+            "altname": "WELLEUR",
+            "nom": "WELL/EUR",
+            "symbole": "WELL"
+        },
+        {
+            "id": "WEUR",
+            "altname": "WEUR",
+            "nom": "W/EUR",
+            "symbole": "W"
+        },
+        {
+            "id": "WFBEUR",
+            "altname": "WFBEUR",
+            "nom": "WFB/EUR",
+            "symbole": "WFB"
+        },
+        {
+            "id": "WIFEUR",
+            "altname": "WIFEUR",
+            "nom": "WIF/EUR",
+            "symbole": "WIF"
+        },
+        {
+            "id": "WINEUR",
+            "altname": "WINEUR",
+            "nom": "WIN/EUR",
+            "symbole": "WIN"
+        },
+        {
+            "id": "WLDEUR",
+            "altname": "WLDEUR",
+            "nom": "WLD/EUR",
+            "symbole": "WLD"
+        },
+        {
+            "id": "WLFIEUR",
+            "altname": "WLFIEUR",
+            "nom": "WLFI/EUR",
+            "symbole": "WLFI"
+        },
+        {
+            "id": "WMTXEUR",
+            "altname": "WMTXEUR",
+            "nom": "WMTX/EUR",
+            "symbole": "WMTX"
+        },
+        {
+            "id": "WOOEUR",
+            "altname": "WOOEUR",
+            "nom": "WOO/EUR",
+            "symbole": "WOO"
+        },
+        {
+            "id": "XANEUR",
+            "altname": "XANEUR",
+            "nom": "XAN/EUR",
+            "symbole": "XAN"
+        },
+        {
+            "id": "XCNEUR",
+            "altname": "XCNEUR",
+            "nom": "XCN/EUR",
+            "symbole": "XCN"
+        },
+        {
+            "id": "XDCEUR",
+            "altname": "XDCEUR",
+            "nom": "XDC/EUR",
+            "symbole": "XDC"
+        },
+        {
+            "id": "XDGEUR",
+            "altname": "XDGEUR",
+            "nom": "XDG/EUR",
+            "symbole": "XDG"
+        },
+        {
+            "id": "XETCZEUR",
+            "altname": "ETCEUR",
+            "nom": "ETC/EUR",
+            "symbole": "ETC"
+        },
+        {
+            "id": "XETHZEUR",
+            "altname": "ETHEUR",
+            "nom": "ETH/EUR",
+            "symbole": "ETH"
+        },
+        {
+            "id": "XIONEUR",
+            "altname": "XIONEUR",
+            "nom": "XION/EUR",
+            "symbole": "XION"
+        },
+        {
+            "id": "XL1EUR",
+            "altname": "XL1EUR",
+            "nom": "XL1/EUR",
+            "symbole": "XL1"
+        },
+        {
+            "id": "XLAEUR",
+            "altname": "XLAEUR",
+            "nom": "XLA/EUR",
+            "symbole": "XLA"
+        },
+        {
+            "id": "XLTCZEUR",
+            "altname": "LTCEUR",
+            "nom": "LTC/EUR",
+            "symbole": "LTC"
+        },
+        {
+            "id": "XMLNZEUR",
+            "altname": "MLNEUR",
+            "nom": "MLN/EUR",
+            "symbole": "MLN"
+        },
+        {
+            "id": "XMNEUR",
+            "altname": "XMNEUR",
+            "nom": "XMN/EUR",
+            "symbole": "XMN"
+        },
+        {
+            "id": "XNYEUR",
+            "altname": "XNYEUR",
+            "nom": "XNY/EUR",
+            "symbole": "XNY"
+        },
+        {
+            "id": "XPLEUR",
+            "altname": "XPLEUR",
+            "nom": "XPL/EUR",
+            "symbole": "XPL"
+        },
+        {
+            "id": "XTZEUR",
+            "altname": "XTZEUR",
+            "nom": "XTZ/EUR",
+            "symbole": "XTZ"
+        },
+        {
+            "id": "XU3O8EUR",
+            "altname": "XU3O8EUR",
+            "nom": "XU3O8/EUR",
+            "symbole": "XU3O8"
+        },
+        {
+            "id": "XXBTZEUR",
+            "altname": "XBTEUR",
+            "nom": "XBT/EUR",
+            "symbole": "XBT"
+        },
+        {
+            "id": "XXLMZEUR",
+            "altname": "XLMEUR",
+            "nom": "XLM/EUR",
+            "symbole": "XLM"
+        },
+        {
+            "id": "XXMRZEUR",
+            "altname": "XMREUR",
+            "nom": "XMR/EUR",
+            "symbole": "XMR"
+        },
+        {
+            "id": "XXRPZEUR",
+            "altname": "XRPEUR",
+            "nom": "XRP/EUR",
+            "symbole": "XRP"
+        },
+        {
+            "id": "XYOEUR",
+            "altname": "XYOEUR",
+            "nom": "XYO/EUR",
+            "symbole": "XYO"
+        },
+        {
+            "id": "XZECZEUR",
+            "altname": "ZECEUR",
+            "nom": "ZEC/EUR",
+            "symbole": "ZEC"
+        },
+        {
+            "id": "YBEUR",
+            "altname": "YBEUR",
+            "nom": "YB/EUR",
+            "symbole": "YB"
+        },
+        {
+            "id": "YFIEUR",
+            "altname": "YFIEUR",
+            "nom": "YFI/EUR",
+            "symbole": "YFI"
+        },
+        {
+            "id": "YGGEUR",
+            "altname": "YGGEUR",
+            "nom": "YGG/EUR",
+            "symbole": "YGG"
+        },
+        {
+            "id": "ZAMAEUR",
+            "altname": "ZAMAEUR",
+            "nom": "ZAMA/EUR",
+            "symbole": "ZAMA"
+        },
+        {
+            "id": "ZBCNEUR",
+            "altname": "ZBCNEUR",
+            "nom": "ZBCN/EUR",
+            "symbole": "ZBCN"
+        },
+        {
+            "id": "ZBTEUR",
+            "altname": "ZBTEUR",
+            "nom": "ZBT/EUR",
+            "symbole": "ZBT"
+        },
+        {
+            "id": "ZEREBROEUR",
+            "altname": "ZEREBROEUR",
+            "nom": "ZEREBRO/EUR",
+            "symbole": "ZEREBRO"
+        },
+        {
+            "id": "ZETAEUR",
+            "altname": "ZETAEUR",
+            "nom": "ZETA/EUR",
+            "symbole": "ZETA"
+        },
+        {
+            "id": "ZEUSEUR",
+            "altname": "ZEUSEUR",
+            "nom": "ZEUS/EUR",
+            "symbole": "ZEUS"
+        },
+        {
+            "id": "ZEXEUR",
+            "altname": "ZEXEUR",
+            "nom": "ZEX/EUR",
+            "symbole": "ZEX"
+        },
+        {
+            "id": "ZIGEUR",
+            "altname": "ZIGEUR",
+            "nom": "ZIG/EUR",
+            "symbole": "ZIG"
+        },
+        {
+            "id": "ZKEUR",
+            "altname": "ZKEUR",
+            "nom": "ZK/EUR",
+            "symbole": "ZK"
+        },
+        {
+            "id": "ZKPEUR",
+            "altname": "ZKPEUR",
+            "nom": "ZKP/EUR",
+            "symbole": "ZKP"
+        },
+        {
+            "id": "ZORAEUR",
+            "altname": "ZORAEUR",
+            "nom": "ZORA/EUR",
+            "symbole": "ZORA"
+        },
+        {
+            "id": "ZRCEUR",
+            "altname": "ZRCEUR",
+            "nom": "ZRC/EUR",
+            "symbole": "ZRC"
+        },
+        {
+            "id": "ZROEUR",
+            "altname": "ZROEUR",
+            "nom": "ZRO/EUR",
+            "symbole": "ZRO"
+        },
+        {
+            "id": "ZRXEUR",
+            "altname": "ZRXEUR",
+            "nom": "ZRX/EUR",
+            "symbole": "ZRX"
+        }
+    ],
+    "selection": [
+        {
+            "id": "XXBTZEUR",
+            "altname": "XBTEUR",
+            "nom": "XBT/EUR",
+            "symbole": "XBT",
+            "crypto": "Bitcoin",
+            "capitalisation_eur": 1097866944156
+        },
+        {
+            "id": "XETHZEUR",
+            "altname": "ETHEUR",
+            "nom": "ETH/EUR",
+            "symbole": "ETH",
+            "crypto": "Ethereum",
+            "capitalisation_eur": 187199235016
+        },
+        {
+            "id": "USDTEUR",
+            "altname": "USDTEUR",
+            "nom": "USDT/EUR",
+            "symbole": "USDT",
+            "crypto": "Tether",
+            "capitalisation_eur": 159239978715
+        },
+        {
+            "id": "BNBEUR",
+            "altname": "BNBEUR",
+            "nom": "BNB/EUR",
+            "symbole": "BNB",
+            "crypto": "BNB",
+            "capitalisation_eur": 65843195104
+        },
+        {
+            "id": "USDCEUR",
+            "altname": "USDCEUR",
+            "nom": "USDC/EUR",
+            "symbole": "USDC",
+            "crypto": "USDC",
+            "capitalisation_eur": 62895227938
+        },
+        {
+            "id": "XXRPZEUR",
+            "altname": "XRPEUR",
+            "nom": "XRP/EUR",
+            "symbole": "XRP",
+            "crypto": "XRP",
+            "capitalisation_eur": 53381572936
+        },
+        {
+            "id": "SOLEUR",
+            "altname": "SOLEUR",
+            "nom": "SOL/EUR",
+            "symbole": "SOL",
+            "crypto": "Solana",
+            "capitalisation_eur": 37474036025
+        },
+        {
+            "id": "TRXEUR",
+            "altname": "TRXEUR",
+            "nom": "TRX/EUR",
+            "symbole": "TRX",
+            "crypto": "TRON",
+            "capitalisation_eur": 26695343681
+        },
+        {
+            "id": "HYPEEUR",
+            "altname": "HYPEEUR",
+            "nom": "HYPE/EUR",
+            "symbole": "HYPE",
+            "crypto": "Hyperliquid",
+            "capitalisation_eur": 12967547794
+        },
+        {
+            "id": "XZECZEUR",
+            "altname": "ZECEUR",
+            "nom": "ZEC/EUR",
+            "symbole": "ZEC",
+            "crypto": "Zcash",
+            "capitalisation_eur": 11371585163
+        },
+        {
+            "id": "XXMRZEUR",
+            "altname": "XMREUR",
+            "nom": "XMR/EUR",
+            "symbole": "XMR",
+            "crypto": "Monero",
+            "capitalisation_eur": 8583800609
+        },
+        {
+            "id": "LINKEUR",
+            "altname": "LINKEUR",
+            "nom": "LINK/EUR",
+            "symbole": "LINK",
+            "crypto": "Chainlink",
+            "capitalisation_eur": 6172734222
+        },
+        {
+            "id": "WBTEUR",
+            "altname": "WBTEUR",
+            "nom": "WBT/EUR",
+            "symbole": "WBT",
+            "crypto": "WhiteBIT Coin",
+            "capitalisation_eur": 6146553736
+        },
+        {
+            "id": "USDSEUR",
+            "altname": "USDSEUR",
+            "nom": "USDS/EUR",
+            "symbole": "USDS",
+            "crypto": "USDS",
+            "capitalisation_eur": 5803056859
+        },
+        {
+            "id": "ADAEUR",
+            "altname": "ADAEUR",
+            "nom": "ADA/EUR",
+            "symbole": "ADA",
+            "crypto": "Cardano",
+            "capitalisation_eur": 4936659934
+        },
+        {
+            "id": "USDEEUR",
+            "altname": "USDEEUR",
+            "nom": "USDE/EUR",
+            "symbole": "USDE",
+            "crypto": "Ethena USDe",
+            "capitalisation_eur": 4454297177
+        },
+        {
+            "id": "XXLMZEUR",
+            "altname": "XLMEUR",
+            "nom": "XLM/EUR",
+            "symbole": "XLM",
+            "crypto": "Stellar",
+            "capitalisation_eur": 4012541296
+        },
+        {
+            "id": "DAIEUR",
+            "altname": "DAIEUR",
+            "nom": "DAI/EUR",
+            "symbole": "DAI",
+            "crypto": "Dai",
+            "capitalisation_eur": 3971596271
+        },
+        {
+            "id": "BCHEUR",
+            "altname": "BCHEUR",
+            "nom": "BCH/EUR",
+            "symbole": "BCH",
+            "crypto": "Bitcoin Cash",
+            "capitalisation_eur": 3594233893
+        },
+        {
+            "id": "NEAREUR",
+            "altname": "NEAREUR",
+            "nom": "NEAR/EUR",
+            "symbole": "NEAR",
+            "crypto": "NEAR Protocol",
+            "capitalisation_eur": 3425348220
+        },
+        {
+            "id": "XLTCZEUR",
+            "altname": "LTCEUR",
+            "nom": "LTC/EUR",
+            "symbole": "LTC",
+            "crypto": "Litecoin",
+            "capitalisation_eur": 2891213739
+        },
+        {
+            "id": "CCEUR",
+            "altname": "CCEUR",
+            "nom": "CC/EUR",
+            "symbole": "CC",
+            "crypto": "Canton",
+            "capitalisation_eur": 2751918969
+        },
+        {
+            "id": "AVAXEUR",
+            "altname": "AVAXEUR",
+            "nom": "AVAX/EUR",
+            "symbole": "AVAX",
+            "crypto": "Avalanche",
+            "capitalisation_eur": 2676128999
+        },
+        {
+            "id": "UNIEUR",
+            "altname": "UNIEUR",
+            "nom": "UNI/EUR",
+            "symbole": "UNI",
+            "crypto": "Uniswap",
+            "capitalisation_eur": 2605365307
+        },
+        {
+            "id": "SUIEUR",
+            "altname": "SUIEUR",
+            "nom": "SUI/EUR",
+            "symbole": "SUI",
+            "crypto": "Sui",
+            "capitalisation_eur": 2435337494
+        },
+        {
+            "id": "HBAREUR",
+            "altname": "HBAREUR",
+            "nom": "HBAR/EUR",
+            "symbole": "HBAR",
+            "crypto": "Hedera",
+            "capitalisation_eur": 2022772926
+        },
+        {
+            "id": "QNTEUR",
+            "altname": "QNTEUR",
+            "nom": "QNT/EUR",
+            "symbole": "QNT",
+            "crypto": "Quant",
+            "capitalisation_eur": 1943712993
+        },
+        {
+            "id": "TAOEUR",
+            "altname": "TAOEUR",
+            "nom": "TAO/EUR",
+            "symbole": "TAO",
+            "crypto": "Bittensor",
+            "capitalisation_eur": 1927947333
+        },
+        {
+            "id": "SHIBEUR",
+            "altname": "SHIBEUR",
+            "nom": "SHIB/EUR",
+            "symbole": "SHIB",
+            "crypto": "Shiba Inu",
+            "capitalisation_eur": 1902994358
+        },
+        {
+            "id": "CROEUR",
+            "altname": "CROEUR",
+            "nom": "CRO/EUR",
+            "symbole": "CRO",
+            "crypto": "Cronos",
+            "capitalisation_eur": 1859105151
+        },
+        {
+            "id": "PAXGEUR",
+            "altname": "PAXGEUR",
+            "nom": "PAXG/EUR",
+            "symbole": "PAXG",
+            "crypto": "PAX Gold",
+            "capitalisation_eur": 1446727995
+        },
+        {
+            "id": "USDDEUR",
+            "altname": "USDDEUR",
+            "nom": "USDD/EUR",
+            "symbole": "USDD",
+            "crypto": "USDD",
+            "capitalisation_eur": 1364591206
+        },
+        {
+            "id": "PEPEEUR",
+            "altname": "PEPEEUR",
+            "nom": "PEPE/EUR",
+            "symbole": "PEPE",
+            "crypto": "Pepe",
+            "capitalisation_eur": 1334605025
+        },
+        {
+            "id": "AAVEEUR",
+            "altname": "AAVEEUR",
+            "nom": "AAVE/EUR",
+            "symbole": "AAVE",
+            "crypto": "Aave",
+            "capitalisation_eur": 1318341572
+        },
+        {
+            "id": "ONDOEUR",
+            "altname": "ONDOEUR",
+            "nom": "ONDO/EUR",
+            "symbole": "ONDO",
+            "crypto": "Ondo",
+            "capitalisation_eur": 1233703250
+        },
+        {
+            "id": "ENAEUR",
+            "altname": "ENAEUR",
+            "nom": "ENA/EUR",
+            "symbole": "ENA",
+            "crypto": "Ethena",
+            "capitalisation_eur": 1203007027
+        },
+        {
+            "id": "WLFIEUR",
+            "altname": "WLFIEUR",
+            "nom": "WLFI/EUR",
+            "symbole": "WLFI",
+            "crypto": "World Liberty Financial",
+            "capitalisation_eur": 1163072157
+        },
+        {
+            "id": "ASTEREUR",
+            "altname": "ASTEREUR",
+            "nom": "ASTER/EUR",
+            "symbole": "ASTER",
+            "crypto": "Aster",
+            "capitalisation_eur": 1152193492
+        },
+        {
+            "id": "VVVEUR",
+            "altname": "VVVEUR",
+            "nom": "VVV/EUR",
+            "symbole": "VVV",
+            "crypto": "Venice Token",
+            "capitalisation_eur": 1092769854
+        },
+        {
+            "id": "MNTEUR",
+            "altname": "MNTEUR",
+            "nom": "MNT/EUR",
+            "symbole": "MNT",
+            "crypto": "Mantle",
+            "capitalisation_eur": 1084829415
+        },
+        {
+            "id": "JSTEUR",
+            "altname": "JSTEUR",
+            "nom": "JST/EUR",
+            "symbole": "JST",
+            "crypto": "JUST",
+            "capitalisation_eur": 1071395083
+        },
+        {
+            "id": "ICPEUR",
+            "altname": "ICPEUR",
+            "nom": "ICP/EUR",
+            "symbole": "ICP",
+            "crypto": "Internet Computer",
+            "capitalisation_eur": 1021149223
+        },
+        {
+            "id": "DOTEUR",
+            "altname": "DOTEUR",
+            "nom": "DOT/EUR",
+            "symbole": "DOT",
+            "crypto": "Polkadot",
+            "capitalisation_eur": 1019060712
+        },
+        {
+            "id": "MORPHOEUR",
+            "altname": "MORPHOEUR",
+            "nom": "MORPHO/EUR",
+            "symbole": "MORPHO",
+            "crypto": "Morpho",
+            "capitalisation_eur": 1008194861
+        },
+        {
+            "id": "BGBEUR",
+            "altname": "BGBEUR",
+            "nom": "BGB/EUR",
+            "symbole": "BGB",
+            "crypto": "Bitget Token",
+            "capitalisation_eur": 979207571
+        },
+        {
+            "id": "SKYEUR",
+            "altname": "SKYEUR",
+            "nom": "SKY/EUR",
+            "symbole": "SKY",
+            "crypto": "Sky",
+            "capitalisation_eur": 859079630
+        },
+        {
+            "id": "XETCZEUR",
+            "altname": "ETCEUR",
+            "nom": "ETC/EUR",
+            "symbole": "ETC",
+            "crypto": "Ethereum Classic",
+            "capitalisation_eur": 839283013
+        },
+        {
+            "id": "WLDEUR",
+            "altname": "WLDEUR",
+            "nom": "WLD/EUR",
+            "symbole": "WLD",
+            "crypto": "Worldcoin",
+            "capitalisation_eur": 813261440
+        },
+        {
+            "id": "PUMPEUR",
+            "altname": "PUMPEUR",
+            "nom": "PUMP/EUR",
+            "symbole": "PUMP",
+            "crypto": "Pump.fun",
+            "capitalisation_eur": 777748421
+        },
+        {
+            "id": "POLEUR",
+            "altname": "POLEUR",
+            "nom": "POL/EUR",
+            "symbole": "POL",
+            "crypto": "POL (ex-MATIC)",
+            "capitalisation_eur": 738348752
+        }
+    ]
+}
