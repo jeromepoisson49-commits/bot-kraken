@@ -8,29 +8,39 @@
 <style>
 *{box-sizing:border-box}
 body{margin:0;padding:20px;background:#101522;color:#f2f4f8;font-family:Arial,sans-serif}
-.container{max-width:750px;margin:auto}
+.container{max-width:850px;margin:auto}
 h1{font-size:27px;margin:12px 0}
 h2{font-size:19px;margin:0 0 18px}
 header{color:#aebbd0;font-size:13px;letter-spacing:2px}
 .status{color:#54d6a0;font-size:13px;margin:12px 0 22px}
 .card{background:#1b2536;border:1px solid #2b3a50;border-radius:14px;padding:18px;margin:14px 0}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.metric{background:#26344a;padding:14px;border-radius:10px}
+.metric{background:#26344a;padding:14px;border-radius:10px;min-width:0}
 .metric small{display:block;color:#aebbd0;font-size:11px;margin-bottom:9px}
-.metric strong{font-size:22px}
+.metric strong{font-size:22px;overflow-wrap:anywhere}
 .section{margin-top:25px}
-.coin,.transaction,.position{display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid #344258}
+.coin,.transaction,.position{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #344258}
 .coin:last-child,.transaction:last-child,.position:last-child{border:0}
-.coin strong{color:#fff}
+.coin strong,.position strong,.transaction>strong{white-space:nowrap;text-align:right}
 .muted{color:#9eacc1;font-size:12px}
-button{width:100%;padding:13px;border:0;border-radius:9px;background:#586fe8;color:white;font-size:15px;margin-top:12px}
+button{width:100%;padding:13px;border:0;border-radius:9px;background:#586fe8;color:white;font-size:15px;margin-top:12px;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
 .positive{color:#54d6a0}
 .negative{color:#ff7777}
+.warning{color:#ffca70}
 footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
+.small-title{font-size:12px;color:#aebbd0;margin:12px 0}
+@media(max-width:520px){
+ body{padding:12px}
+ .card{padding:14px}
+ .metric strong{font-size:18px}
+ .coin,.position,.transaction{font-size:13px}
+}
 </style>
 </head>
 <body>
 <div class="container">
+
 <header>KRAKEN • TABLEAU DE BORD</header>
 <h1>Mon portefeuille</h1>
 <div class="status">● SIMULATION — AUCUN ACHAT RÉEL</div>
@@ -38,23 +48,24 @@ footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
 <div class="card">
 <h2>Portefeuille virtuel</h2>
 <div class="grid">
-<div class="metric">
-<small>CAPITAL INITIAL</small>
-<strong>500,00 €</strong>
+ <div class="metric">
+  <small>CAPITAL INITIAL</small>
+  <strong>500,00 €</strong>
+ </div>
+ <div class="metric">
+  <small>EUROS DISPONIBLES</small>
+  <strong id="euros">Chargement...</strong>
+ </div>
+ <div class="metric">
+  <small>VALEUR TOTALE</small>
+  <strong id="total">Chargement...</strong>
+ </div>
+ <div class="metric">
+  <small>GAIN / PERTE ESTIMÉ</small>
+  <strong id="gain">Chargement...</strong>
+ </div>
 </div>
-<div class="metric">
-<small>EUROS DISPONIBLES</small>
-<strong id="euros">Chargement...</strong>
-</div>
-<div class="metric">
-<small>VALEUR TOTALE</small>
-<strong id="total">Chargement...</strong>
-</div>
-<div class="metric">
-<small>GAIN / PERTE</small>
-<strong id="gain">Chargement...</strong>
-</div>
-</div>
+<div id="avertissement" class="muted" style="margin-top:14px"></div>
 </div>
 
 <div class="card section">
@@ -63,175 +74,255 @@ footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
 </div>
 
 <div class="card section">
-<h2>Marché crypto</h2>
-<div id="marche">Chargement des cours...</div>
-<button onclick="actualiser()">Actualiser les cours</button>
+<h2>Marché crypto — sélection du robot</h2>
+<div class="muted" id="dateSelection">Chargement de la sélection...</div>
+<div id="marche" class="muted">Chargement des cours...</div>
+<button id="boutonActualiser" onclick="actualiser()">Actualiser les données</button>
 </div>
 
 <div class="card section">
 <h2>Historique des transactions</h2>
-<div id="historique">Chargement...</div>
+<div id="historique" class="muted">Chargement...</div>
 </div>
 
 <div class="card section">
 <h2>État du robot</h2>
 <div class="status">● Robot hébergé sur GitHub Actions</div>
-<div class="muted">Dernière actualisation : <span id="maj">-</span></div>
+<div class="muted">Dernière mise à jour des cours : <span id="maj">-</span></div>
+<div class="muted" style="margin-top:8px">Le robot actualise les données lors de ses exécutions GitHub Actions.</div>
 </div>
 
 <footer>Kraken Portfolio • Tableau de bord personnel</footer>
 </div>
 
 <script>
-const paires = {
-"XXBTZEUR": {nom:"Bitcoin", symbole:"BTC"},
-"XETHZEUR": {nom:"Ethereum", symbole:"ETH"},
-"SOLEUR": {nom:"Solana", symbole:"SOL"},
-"XXRPZEUR": {nom:"XRP", symbole:"XRP"},
-"ADAEUR": {nom:"Cardano", symbole:"ADA"}
-};
-
-let prix = {};
+let portefeuille = {};
+let selection = {};
+let historique = [];
 
 function euro(valeur){
  return Number(valeur || 0).toLocaleString("fr-FR",{
-  style:"currency",currency:"EUR"
+  style:"currency",
+  currency:"EUR"
  });
 }
 
-async function actualiser(){
- document.getElementById("maj").textContent =
-  new Date().toLocaleTimeString("fr-FR");
-
- try{
-  const reponse = await fetch(
-   "https://api.kraken.com/0/public/Ticker?pair=XBTEUR,ETHEUR,SOLEUR,XRPEUR,ADAEUR"
-  );
-  const donnees = await reponse.json();
-
-  if(donnees.error && donnees.error.length){
-   throw new Error(donnees.error.join(", "));
-  }
-
-  prix = donnees.result;
-  afficherMarche();
-  await chargerPortefeuille();
- }catch(erreur){
-  document.getElementById("marche").textContent =
-   "Impossible de récupérer les cours pour le moment.";
- }
+function nombre(valeur, decimales=8){
+ return Number(valeur || 0).toLocaleString("fr-FR",{
+  maximumFractionDigits:decimales
+ });
 }
 
-function trouverPrix(paire){
- const correspondance = {
-  "XXBTZEUR":"XXBTZEUR",
-  "XETHZEUR":"XETHZEUR",
-  "SOLEUR":"SOLEUR",
-  "XXRPZEUR":"XXRPZEUR",
-  "ADAEUR":"ADAEUR"
- };
- const cle = correspondance[paire];
- if(prix[cle]) return Number(prix[cle].c[0]);
+function echapper(valeur){
+ return String(valeur ?? "").replace(/[&<>"']/g, caractere => ({
+  "&":"&amp;",
+  "<":"&lt;",
+  ">":"&gt;",
+  '"':"&quot;",
+  "'":"&#039;"
+ }[caractere]));
+}
 
- const autre = Object.keys(prix).find(k =>
-  k.includes(paire.replace("XX","X").replace("ZEUR","EUR"))
+function obtenirPrix(paire, donnees){
+ const prix = donnees.derniers_prix || {};
+
+ if(prix[paire] !== undefined){
+  return Number(prix[paire]);
+ }
+
+ const entree = (selection.selection || []).find(p =>
+  p.id === paire || p.altname === paire
  );
- return autre ? Number(prix[autre].c[0]) : 0;
+
+ if(entree){
+  if(prix[entree.id] !== undefined) return Number(prix[entree.id]);
+  if(prix[entree.altname] !== undefined) return Number(prix[entree.altname]);
+ }
+
+ return null;
+}
+
+function nomCrypto(paire, position){
+ if(position && position.nom) return position.nom;
+
+ const entree = (selection.selection || []).find(p =>
+  p.id === paire || p.altname === paire
+ );
+
+ if(entree && entree.crypto) return entree.crypto;
+
+ const catalogue = selection.catalogue || [];
+ const correspondance = catalogue.find(p =>
+  p.id === paire || p.altname === paire
+ );
+
+ return correspondance ? correspondance.nom : paire;
+}
+
+function afficherPortefeuille(){
+ const euros = Number(portefeuille.euros || 0);
+ const positions = portefeuille.positions || {};
+
+ let valeurConnue = euros;
+ let positionsSansCours = 0;
+ let html = "";
+
+ for(const [paire, position] of Object.entries(positions)){
+  const cours = obtenirPrix(paire, portefeuille);
+  const quantite = Number(position.quantite || 0);
+  const achat = Number(position.prix_achat || 0);
+
+  let montantTexte = "Cours indisponible";
+
+  if(cours !== null && Number.isFinite(cours)){
+   const montant = quantite * cours;
+   valeurConnue += montant;
+   montantTexte = euro(montant);
+  }else{
+   positionsSansCours++;
+  }
+
+  html += `
+   <div class="position">
+    <span>
+     <strong>${echapper(nomCrypto(paire, position))}</strong><br>
+     <span class="muted">${nombre(quantite, 10)} unités</span><br>
+     <span class="muted">Prix d'achat : ${euro(achat)}</span>
+    </span>
+    <strong>${montantTexte}</strong>
+   </div>
+  `;
+ }
+
+ document.getElementById("euros").textContent = euro(euros);
+
+ document.getElementById("positions").innerHTML =
+  html || "Aucune position ouverte.";
+
+ const totalElement = document.getElementById("total");
+ const gainElement = document.getElementById("gain");
+ const avertissement = document.getElementById("avertissement");
+
+ if(positionsSansCours > 0){
+  totalElement.textContent = euro(valeurConnue) + " (partiel)";
+  gainElement.textContent = "Indisponible";
+  gainElement.className = "warning";
+  avertissement.textContent =
+   positionsSansCours + " position(s) sans cours récent. Le total et le gain ne sont pas complets.";
+ }else{
+  const gain = valeurConnue - 500;
+
+  totalElement.textContent = euro(valeurConnue);
+  gainElement.textContent = (gain >= 0 ? "+" : "") + euro(gain);
+  gainElement.className = gain >= 0 ? "positive" : "negative";
+  avertissement.textContent =
+   "Valorisation calculée avec les derniers cours enregistrés par le robot.";
+ }
+
+ const maj = portefeuille.maj_prix_utc;
+
+ document.getElementById("maj").textContent = maj
+  ? new Date(maj).toLocaleString("fr-FR")
+  : "Pas encore disponible";
 }
 
 function afficherMarche(){
- const noms = {
-  "ADAEUR":"Cardano",
-  "SOLEUR":"Solana",
-  "XETHZEUR":"Ethereum",
-  "XXBTZEUR":"Bitcoin",
-  "XXRPZEUR":"XRP"
- };
- const cles = {
-  "ADAEUR":Object.keys(prix).find(k=>k.includes("ADA")),
-  "SOLEUR":Object.keys(prix).find(k=>k.includes("SOL")),
-  "XETHZEUR":Object.keys(prix).find(k=>k.includes("ETH")),
-  "XXBTZEUR":Object.keys(prix).find(k=>k.includes("XBT")),
-  "XXRPZEUR":Object.keys(prix).find(k=>k.includes("XRP"))
- };
- document.getElementById("marche").innerHTML =
-  Object.keys(noms).map(p=>{
-   const cle=cles[p];
-   const cours=cle ? Number(prix[cle].c[0]) : 0;
-   return `<div class="coin"><span>${noms[p]}</span><strong>${euro(cours)}</strong></div>`;
-  }).join("");
-}
+ const liste = selection.selection || [];
 
-async function chargerPortefeuille(){
- try{
-  const r=await fetch("portefeuille.json?t="+Date.now(),{cache:"no-store"});
-  if(!r.ok) throw new Error("Portefeuille inaccessible");
-  const p=await r.json();
+ document.getElementById("dateSelection").textContent =
+  liste.length + " cryptos dans la sélection — classement du " +
+  (selection.date || "date inconnue");
 
-  const euros=Number(p.euros || 0);
-  let valeur=euros;
-  let html="";
-
-  for(const [paire,pos] of Object.entries(p.positions || {})){
-   const cours=trouverPrix(paire);
-   const quantite=Number(pos.quantite || 0);
-   const achat=Number(pos.prix_achat || 0);
-   const montant=quantite*cours;
-   valeur+=montant;
-   html+=`<div class="position">
-    <span>${paires[paire]?.nom || paire}<br>
-    <span class="muted">${quantite.toFixed(5)} unités</span></span>
-    <strong>${euro(montant)}<br>
-    <span class="muted">Achat : ${euro(achat)}</span></strong>
-   </div>`;
-  }
-
-  document.getElementById("euros").textContent=euro(euros);
-  document.getElementById("total").textContent=euro(valeur);
-
-  const gain=valeur-500;
-  const gainElement=document.getElementById("gain");
-  gainElement.textContent=(gain>=0?"+":"")+euro(gain);
-  gainElement.className=gain>=0?"positive":"negative";
-
-  document.getElementById("positions").innerHTML=
-   html || "Aucune position ouverte pour le moment.";
- }catch(erreur){
-  document.getElementById("euros").textContent="Indisponible";
-  document.getElementById("total").textContent="Indisponible";
-  document.getElementById("gain").textContent="Indisponible";
-  document.getElementById("positions").textContent=
-   "Impossible de lire le portefeuille.";
+ if(!liste.length){
+  document.getElementById("marche").textContent =
+   "La sélection des cryptos n'est pas disponible.";
+  return;
  }
+
+ document.getElementById("marche").innerHTML = liste.map(crypto => {
+  const prix = obtenirPrix(crypto.id, portefeuille);
+  const cours = prix === null ? "Cours indisponible" : euro(prix);
+
+  return `
+   <div class="coin">
+    <span>
+     <strong>${echapper(crypto.crypto || crypto.nom || crypto.altname)}</strong><br>
+     <span class="muted">${echapper(crypto.altname || "")}</span>
+    </span>
+    <strong>${cours}</strong>
+   </div>
+  `;
+ }).join("");
 }
 
-async function afficherHistorique(){
- try{
-  const r=await fetch("transactions.json?t="+Date.now(),{cache:"no-store"});
-  if(!r.ok) throw new Error("Historique inaccessible");
-  const historique=await r.json();
+function afficherHistorique(){
+ const element = document.getElementById("historique");
 
-  document.getElementById("historique").innerHTML=
-   historique.length ? historique.slice().reverse().map(t=>{
-    const date=t.date ? new Date(t.date).toLocaleString("fr-FR") : "";
-    const type=t.type || "TRANSACTION";
-    const montant=euro(t.montant_eur);
-    const gain=t.gain_perte !== undefined
-     ? `<div class="muted">Gain / perte : ${euro(t.gain_perte)}</div>` : "";
-    return `<div class="transaction">
-     <div><strong>${type} - ${paires[t.crypto]?.nom || t.crypto}</strong>
-     <div class="muted">${date}</div>${gain}</div>
-     <strong>${montant}</strong>
-    </div>`;
-   }).join("") : "Aucune transaction enregistrée.";
+ if(!Array.isArray(historique) || !historique.length){
+  element.textContent = "Aucune transaction enregistrée.";
+  return;
+ }
+
+ element.innerHTML = historique.slice().reverse().map(transaction => {
+  const date = transaction.date
+   ? new Date(transaction.date).toLocaleString("fr-FR")
+   : "";
+
+  const type = transaction.type || "TRANSACTION";
+  const nom = transaction.crypto || transaction.paire || "Crypto";
+  const montant = euro(transaction.montant_eur);
+
+  const gain = transaction.gain_perte !== undefined
+   ? `<div class="muted">Gain / perte : ${euro(transaction.gain_perte)}</div>`
+   : "";
+
+  return `
+   <div class="transaction">
+    <span>
+     <strong>${echapper(type)} — ${echapper(nom)}</strong><br>
+     <span class="muted">${echapper(date)}</span>
+     ${gain}
+    </span>
+    <strong>${montant}</strong>
+   </div>
+  `;
+ }).join("");
+}
+
+async function actualiser(){
+ const bouton = document.getElementById("boutonActualiser");
+ bouton.disabled = true;
+ bouton.textContent = "Actualisation...";
+
+ try{
+  const [rPortefeuille, rSelection, rHistorique] = await Promise.all([
+   fetch("portefeuille.json?t=" + Date.now(), {cache:"no-store"}),
+   fetch("selection_cryptos.json?t=" + Date.now(), {cache:"no-store"}),
+   fetch("transactions.json?t=" + Date.now(), {cache:"no-store"})
+  ]);
+
+  if(!rPortefeuille.ok) throw new Error("portefeuille.json inaccessible");
+  if(!rSelection.ok) throw new Error("selection_cryptos.json inaccessible");
+  if(!rHistorique.ok) throw new Error("transactions.json inaccessible");
+
+  portefeuille = await rPortefeuille.json();
+  selection = await rSelection.json();
+  historique = await rHistorique.json();
+
+  afficherPortefeuille();
+  afficherMarche();
+  afficherHistorique();
+
  }catch(erreur){
-  document.getElementById("historique").textContent=
-   "Impossible de lire l'historique.";
+  document.getElementById("avertissement").textContent =
+   "Impossible de charger les fichiers : " + erreur.message;
+ }finally{
+  bouton.disabled = false;
+  bouton.textContent = "Actualiser les données";
  }
 }
 
 actualiser();
-afficherHistorique();
 </script>
 </body>
 </html>
