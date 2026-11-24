@@ -1,0 +1,39 @@
+
+name: Reset portefeuille virtuel
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bot-crypto-kraken
+  cancel-in-progress: false
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Remettre le portefeuille à zéro
+        run: |
+          cat > portefeuille.json <<'EOF'
+          {
+            "euros": 500.0,
+            "positions": {},
+            "dernieres_bougies": {},
+            "derniers_prix": {}
+          }
+          EOF
+          echo '[]' > transactions.json
+          echo '{}' > selection_cryptos.json
+
+      - name: Sauvegarder
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add portefeuille.json transactions.json selection_cryptos.json
+          git commit -m "Reset simulation a 500 euros"
+          git push
