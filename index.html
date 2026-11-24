@@ -5,31 +5,127 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kraken Portfolio</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;padding:20px;background:#101522;color:#f2f4f8;font-family:Arial,sans-serif}
+
+body{
+ margin:0;
+ padding:20px;
+ background:#101522;
+ color:#f2f4f8;
+ font-family:Arial,sans-serif
+}
+
 .container{max-width:850px;margin:auto}
+
 h1{font-size:27px;margin:12px 0}
 h2{font-size:19px;margin:0 0 18px}
-header{color:#aebbd0;font-size:13px;letter-spacing:2px}
-.status{color:#54d6a0;font-size:13px;margin:12px 0 22px}
-.card{background:#1b2536;border:1px solid #2b3a50;border-radius:14px;padding:18px;margin:14px 0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.metric{background:#26344a;padding:14px;border-radius:10px;min-width:0}
-.metric small{display:block;color:#aebbd0;font-size:11px;margin-bottom:9px}
-.metric strong{font-size:22px;overflow-wrap:anywhere}
+
+header{
+ color:#aebbd0;
+ font-size:13px;
+ letter-spacing:2px
+}
+
+.status{
+ color:#54d6a0;
+ font-size:13px;
+ margin:12px 0 22px
+}
+
+.card{
+ background:#1b2536;
+ border:1px solid #2b3a50;
+ border-radius:14px;
+ padding:18px;
+ margin:14px 0
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px
+}
+
+.metric{
+ background:#26344a;
+ padding:14px;
+ border-radius:10px;
+ min-width:0
+}
+
+.metric small{
+ display:block;
+ color:#aebbd0;
+ font-size:11px;
+ margin-bottom:9px
+}
+
+.metric strong{
+ font-size:22px;
+ overflow-wrap:anywhere
+}
+
 .section{margin-top:25px}
-.coin,.transaction,.position{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #344258}
-.coin:last-child,.transaction:last-child,.position:last-child{border:0}
-.coin strong,.position strong,.transaction>strong{white-space:nowrap;text-align:right}
-.muted{color:#9eacc1;font-size:12px}
-button{width:100%;padding:13px;border:0;border-radius:9px;background:#586fe8;color:white;font-size:15px;margin-top:12px;cursor:pointer}
-button:disabled{opacity:.6;cursor:wait}
+
+.coin,.transaction,.position{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:10px;
+ padding:13px 0;
+ border-bottom:1px solid #344258
+}
+
+.coin:last-child,.transaction:last-child,.position:last-child{
+ border:0
+}
+
+.coin strong,.position strong,.transaction>strong{
+ white-space:nowrap;
+ text-align:right
+}
+
+.muted{
+ color:#9eacc1;
+ font-size:12px
+}
+
+button{
+ width:100%;
+ padding:13px;
+ border:0;
+ border-radius:9px;
+ background:#586fe8;
+ color:white;
+ font-size:15px;
+ margin-top:12px;
+ cursor:pointer
+}
+
+button:disabled{
+ opacity:.6;
+ cursor:wait
+}
+
 .positive{color:#54d6a0}
 .negative{color:#ff7777}
 .warning{color:#ffca70}
-footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
-.small-title{font-size:12px;color:#aebbd0;margin:12px 0}
+
+footer{
+ text-align:center;
+ color:#8290a5;
+ font-size:12px;
+ margin:25px 0
+}
+
+.small-title{
+ font-size:12px;
+ color:#aebbd0;
+ margin:12px 0
+}
+
 @media(max-width:520px){
  body{padding:12px}
  .card{padding:14px}
@@ -38,33 +134,43 @@ footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
 }
 </style>
 </head>
+
 <body>
 <div class="container">
 
 <header>KRAKEN • TABLEAU DE BORD</header>
+
 <h1>Mon portefeuille</h1>
+
 <div class="status">● SIMULATION — AUCUN ACHAT RÉEL</div>
 
 <div class="card">
 <h2>Portefeuille virtuel</h2>
+
 <div class="grid">
+
  <div class="metric">
   <small>CAPITAL INITIAL</small>
   <strong>500,00 €</strong>
  </div>
+
  <div class="metric">
   <small>EUROS DISPONIBLES</small>
   <strong id="euros">Chargement...</strong>
  </div>
+
  <div class="metric">
   <small>VALEUR TOTALE</small>
   <strong id="total">Chargement...</strong>
  </div>
+
  <div class="metric">
   <small>GAIN / PERTE ESTIMÉ</small>
   <strong id="gain">Chargement...</strong>
  </div>
+
 </div>
+
 <div id="avertissement" class="muted" style="margin-top:14px"></div>
 </div>
 
@@ -75,9 +181,18 @@ footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
 
 <div class="card section">
 <h2>Marché crypto — sélection du robot</h2>
-<div class="muted" id="dateSelection">Chargement de la sélection...</div>
-<div id="marche" class="muted">Chargement des cours...</div>
-<button id="boutonActualiser" onclick="actualiser()">Actualiser les données</button>
+
+<div class="muted" id="dateSelection">
+Chargement de la sélection...
+</div>
+
+<div id="marche" class="muted">
+Chargement des cours...
+</div>
+
+<button id="boutonActualiser" onclick="actualiser()">
+Actualiser les données
+</button>
 </div>
 
 <div class="card section">
@@ -87,12 +202,49 @@ footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
 
 <div class="card section">
 <h2>État du robot</h2>
-<div class="status">● Robot hébergé sur GitHub Actions</div>
-<div class="muted">Dernière mise à jour des cours : <span id="maj">-</span></div>
-<div class="muted" style="margin-top:8px">Le robot actualise les données lors de ses exécutions GitHub Actions.</div>
+
+<div class="status">
+● Robot hébergé sur GitHub Actions
 </div>
 
-<footer>Kraken Portfolio • Tableau de bord personnel</footer>
+<div class="muted">
+Dernière mise à jour des cours :
+<span id="maj">-</span>
+</div>
+
+<div class="muted" style="margin-top:8px">
+Le robot actualise les données lors de ses exécutions GitHub Actions.
+</div>
+</div>
+
+<!-- BOUTON RESET -->
+<div class="card section" style="border-color:#a93649">
+
+<h2>Réinitialiser la simulation</h2>
+
+<p class="muted">
+Efface les positions et l'historique.
+Nouveau départ avec 500 €.
+</p>
+
+<button
+ style="background:#a93649"
+ onclick="resetBot()">
+
+ ↻ RESET — REPARTIR DE 500 €
+
+</button>
+
+<div class="muted" style="margin-top:9px">
+Une confirmation supplémentaire sera demandée sur GitHub.
+</div>
+
+</div>
+
+<footer>
+Kraken Portfolio • Tableau de bord personnel
+</footer>
+
 </div>
 
 <script>
@@ -152,6 +304,7 @@ function nomCrypto(paire, position){
  if(entree && entree.crypto) return entree.crypto;
 
  const catalogue = selection.catalogue || [];
+
  const correspondance = catalogue.find(p =>
   p.id === paire || p.altname === paire
  );
@@ -207,14 +360,17 @@ function afficherPortefeuille(){
   totalElement.textContent = euro(valeurConnue) + " (partiel)";
   gainElement.textContent = "Indisponible";
   gainElement.className = "warning";
+
   avertissement.textContent =
    positionsSansCours + " position(s) sans cours récent. Le total et le gain ne sont pas complets.";
+
  }else{
   const gain = valeurConnue - 500;
 
   totalElement.textContent = euro(valeurConnue);
   gainElement.textContent = (gain >= 0 ? "+" : "") + euro(gain);
   gainElement.className = gain >= 0 ? "positive" : "negative";
+
   avertissement.textContent =
    "Valorisation calculée avec les derniers cours enregistrés par le robot.";
  }
@@ -291,6 +447,7 @@ function afficherHistorique(){
 
 async function actualiser(){
  const bouton = document.getElementById("boutonActualiser");
+
  bouton.disabled = true;
  bouton.textContent = "Actualisation...";
 
@@ -322,7 +479,21 @@ async function actualiser(){
  }
 }
 
+// FONCTION DU BOUTON RESET
+function resetBot(){
+
+ const confirmation = confirm(
+  "ATTENTION ! Toutes les positions et toutes les transactions seront effacées. Le portefeuille repartira de 500 €. Continuer ?"
+ );
+
+ if(!confirmation) return;
+
+ window.location.href =
+  "https://github.com/jeromepoisson49-commits/bot-kraken/actions/workflows/reset.yml";
+}
+
 actualiser();
+
 </script>
 </body>
 </html>
