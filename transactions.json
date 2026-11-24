@@ -178,5 +178,15 @@
         "frais_eur": 0.0,
         "gain_perte": 0.14843986670705966,
         "date": "2026-11-24T04:24:38.995765+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "Bitcoin Cash",
+        "paire": "BCHEUR",
+        "prix_achat": 183.11,
+        "quantite": 0.05461198186882202,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-24T08:57:18.319287+00:00"
     }
 ]
