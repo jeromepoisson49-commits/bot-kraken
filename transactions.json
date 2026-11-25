@@ -96,5 +96,17 @@
         "frais_eur": 0.0,
         "gain_perte": 0.10119595216191435,
         "date": "2026-11-25T19:00:19.729478+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "Bittensor",
+        "paire": "TAOEUR",
+        "prix_achat": 164.2182,
+        "prix_vente": 165.8164,
+        "quantite": 0.06089459024639169,
+        "montant_eur": 10.097321734131782,
+        "frais_eur": 0.0,
+        "gain_perte": 0.09732173413178202,
+        "date": "2026-11-25T19:57:26.142030+00:00"
     }
 ]
