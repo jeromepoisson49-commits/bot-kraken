@@ -72,5 +72,17 @@
         "frais_eur": 0.0,
         "gain_perte": 0.164925783397468,
         "date": "2026-11-25T16:22:31.857014+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "Stellar",
+        "paire": "XXLMZEUR",
+        "prix_achat": 0.112295,
+        "prix_vente": 0.113696,
+        "quantite": 89.05115989135759,
+        "montant_eur": 10.124760675007792,
+        "frais_eur": 0.0,
+        "gain_perte": 0.12476067500779209,
+        "date": "2026-11-25T17:22:54.103958+00:00"
     }
 ]
