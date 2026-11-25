@@ -28,5 +28,25 @@
         "montant_eur": 10.0,
         "frais_eur": 0.0,
         "date": "2026-11-25T09:39:40.712284+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "Cardano",
+        "paire": "ADAEUR",
+        "prix_achat": 0.125487,
+        "quantite": 79.68952959270682,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-25T14:04:40.595912+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "Litecoin",
+        "paire": "XLTCZEUR",
+        "prix_achat": 36.38,
+        "quantite": 0.27487630566245186,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-25T14:04:41.216777+00:00"
     }
 ]
