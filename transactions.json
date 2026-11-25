@@ -84,5 +84,17 @@
         "frais_eur": 0.0,
         "gain_perte": 0.12476067500779209,
         "date": "2026-11-25T17:22:54.103958+00:00"
+    },
+    {
+        "type": "VENTE",
+        "crypto": "Mantle",
+        "paire": "MNTEUR",
+        "prix_achat": 0.3261,
+        "prix_vente": 0.3294,
+        "quantite": 30.665440049064703,
+        "montant_eur": 10.101195952161914,
+        "frais_eur": 0.0,
+        "gain_perte": 0.10119595216191435,
+        "date": "2026-11-25T19:00:19.729478+00:00"
     }
 ]
