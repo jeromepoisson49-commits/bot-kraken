@@ -18,5 +18,15 @@
         "montant_eur": 10.0,
         "frais_eur": 0.0,
         "date": "2026-11-25T00:12:50.737911+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "Stellar",
+        "paire": "XXLMZEUR",
+        "prix_achat": 0.112295,
+        "quantite": 89.05115989135759,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-25T09:39:40.712284+00:00"
     }
 ]
