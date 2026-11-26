@@ -1,5 +1,5 @@
 {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "catalogue": [
         {
             "id": "0GEUR",
@@ -2961,7 +2961,7 @@
             "nom": "XBT/EUR",
             "symbole": "XBT",
             "crypto": "Bitcoin",
-            "capitalisation_eur": 1092575581194
+            "capitalisation_eur": 1114441458981
         },
         {
             "id": "XETHZEUR",
@@ -2969,7 +2969,7 @@
             "nom": "ETH/EUR",
             "symbole": "ETH",
             "crypto": "Ethereum",
-            "capitalisation_eur": 186492486737
+            "capitalisation_eur": 189651252421
         },
         {
             "id": "USDTEUR",
@@ -2977,7 +2977,7 @@
             "nom": "USDT/EUR",
             "symbole": "USDT",
             "crypto": "Tether",
-            "capitalisation_eur": 159278091519
+            "capitalisation_eur": 158449788922
         },
         {
             "id": "BNBEUR",
@@ -2985,7 +2985,7 @@
             "nom": "BNB/EUR",
             "symbole": "BNB",
             "crypto": "BNB",
-            "capitalisation_eur": 65559463809
+            "capitalisation_eur": 66706722998
         },
         {
             "id": "USDCEUR",
@@ -2993,7 +2993,7 @@
             "nom": "USDC/EUR",
             "symbole": "USDC",
             "crypto": "USDC",
-            "capitalisation_eur": 62914617183
+            "capitalisation_eur": 63002650336
         },
         {
             "id": "XXRPZEUR",
@@ -3001,7 +3001,7 @@
             "nom": "XRP/EUR",
             "symbole": "XRP",
             "crypto": "XRP",
-            "capitalisation_eur": 53430392343
+            "capitalisation_eur": 54556682051
         },
         {
             "id": "SOLEUR",
@@ -3009,7 +3009,7 @@
             "nom": "SOL/EUR",
             "symbole": "SOL",
             "crypto": "Solana",
-            "capitalisation_eur": 37552859875
+            "capitalisation_eur": 38341718139
         },
         {
             "id": "TRXEUR",
@@ -3017,7 +3017,7 @@
             "nom": "TRX/EUR",
             "symbole": "TRX",
             "crypto": "TRON",
-            "capitalisation_eur": 26677347726
+            "capitalisation_eur": 26287841242
         },
         {
             "id": "HYPEEUR",
@@ -3025,7 +3025,7 @@
             "nom": "HYPE/EUR",
             "symbole": "HYPE",
             "crypto": "Hyperliquid",
-            "capitalisation_eur": 12879207737
+            "capitalisation_eur": 13481001464
         },
         {
             "id": "XZECZEUR",
@@ -3033,7 +3033,7 @@
             "nom": "ZEC/EUR",
             "symbole": "ZEC",
             "crypto": "Zcash",
-            "capitalisation_eur": 11428267873
+            "capitalisation_eur": 12037662297
         },
         {
             "id": "XXMRZEUR",
@@ -3041,7 +3041,7 @@
             "nom": "XMR/EUR",
             "symbole": "XMR",
             "crypto": "Monero",
-            "capitalisation_eur": 8738392688
+            "capitalisation_eur": 8808311931
         },
         {
             "id": "LINKEUR",
@@ -3049,7 +3049,7 @@
             "nom": "LINK/EUR",
             "symbole": "LINK",
             "crypto": "Chainlink",
-            "capitalisation_eur": 6168932056
+            "capitalisation_eur": 6385190712
         },
         {
             "id": "WBTEUR",
@@ -3057,7 +3057,7 @@
             "nom": "WBT/EUR",
             "symbole": "WBT",
             "crypto": "WhiteBIT Coin",
-            "capitalisation_eur": 6124162945
+            "capitalisation_eur": 6368251661
         },
         {
             "id": "USDSEUR",
@@ -3065,7 +3065,7 @@
             "nom": "USDS/EUR",
             "symbole": "USDS",
             "crypto": "USDS",
-            "capitalisation_eur": 5799545333
+            "capitalisation_eur": 5743010585
         },
         {
             "id": "ADAEUR",
@@ -3073,7 +3073,7 @@
             "nom": "ADA/EUR",
             "symbole": "ADA",
             "crypto": "Cardano",
-            "capitalisation_eur": 4933134056
+            "capitalisation_eur": 5022988261
         },
         {
             "id": "USDEEUR",
@@ -3081,7 +3081,7 @@
             "nom": "USDE/EUR",
             "symbole": "USDE",
             "crypto": "Ethena USDe",
-            "capitalisation_eur": 4461895602
+            "capitalisation_eur": 4482135565
         },
         {
             "id": "XXLMZEUR",
@@ -3089,7 +3089,7 @@
             "nom": "XLM/EUR",
             "symbole": "XLM",
             "crypto": "Stellar",
-            "capitalisation_eur": 3990482419
+            "capitalisation_eur": 4178026096
         },
         {
             "id": "DAIEUR",
@@ -3097,7 +3097,7 @@
             "nom": "DAI/EUR",
             "symbole": "DAI",
             "crypto": "Dai",
-            "capitalisation_eur": 3969159685
+            "capitalisation_eur": 3986003184
         },
         {
             "id": "BCHEUR",
@@ -3105,7 +3105,7 @@
             "nom": "BCH/EUR",
             "symbole": "BCH",
             "crypto": "Bitcoin Cash",
-            "capitalisation_eur": 3615909993
+            "capitalisation_eur": 3806525637
         },
         {
             "id": "NEAREUR",
@@ -3113,7 +3113,7 @@
             "nom": "NEAR/EUR",
             "symbole": "NEAR",
             "crypto": "NEAR Protocol",
-            "capitalisation_eur": 3435236574
+            "capitalisation_eur": 3683484390
         },
         {
             "id": "XLTCZEUR",
@@ -3121,7 +3121,7 @@
             "nom": "LTC/EUR",
             "symbole": "LTC",
             "crypto": "Litecoin",
-            "capitalisation_eur": 2894819926
+            "capitalisation_eur": 3049347258
         },
         {
             "id": "CCEUR",
@@ -3129,7 +3129,7 @@
             "nom": "CC/EUR",
             "symbole": "CC",
             "crypto": "Canton",
-            "capitalisation_eur": 2728013441
+            "capitalisation_eur": 2855531004
         },
         {
             "id": "AVAXEUR",
@@ -3137,7 +3137,7 @@
             "nom": "AVAX/EUR",
             "symbole": "AVAX",
             "crypto": "Avalanche",
-            "capitalisation_eur": 2666182333
+            "capitalisation_eur": 2715417172
         },
         {
             "id": "UNIEUR",
@@ -3145,7 +3145,7 @@
             "nom": "UNI/EUR",
             "symbole": "UNI",
             "crypto": "Uniswap",
-            "capitalisation_eur": 2607147312
+            "capitalisation_eur": 2634452943
         },
         {
             "id": "SUIEUR",
@@ -3153,7 +3153,7 @@
             "nom": "SUI/EUR",
             "symbole": "SUI",
             "crypto": "Sui",
-            "capitalisation_eur": 2440878340
+            "capitalisation_eur": 2540916751
         },
         {
             "id": "HBAREUR",
@@ -3161,15 +3161,7 @@
             "nom": "HBAR/EUR",
             "symbole": "HBAR",
             "crypto": "Hedera",
-            "capitalisation_eur": 2031618693
-        },
-        {
-            "id": "QNTEUR",
-            "altname": "QNTEUR",
-            "nom": "QNT/EUR",
-            "symbole": "QNT",
-            "crypto": "Quant",
-            "capitalisation_eur": 1940701492
+            "capitalisation_eur": 2131654626
         },
         {
             "id": "TAOEUR",
@@ -3177,7 +3169,7 @@
             "nom": "TAO/EUR",
             "symbole": "TAO",
             "crypto": "Bittensor",
-            "capitalisation_eur": 1929921055
+            "capitalisation_eur": 1958136326
         },
         {
             "id": "SHIBEUR",
@@ -3185,7 +3177,15 @@
             "nom": "SHIB/EUR",
             "symbole": "SHIB",
             "crypto": "Shiba Inu",
-            "capitalisation_eur": 1899371730
+            "capitalisation_eur": 1939514860
+        },
+        {
+            "id": "QNTEUR",
+            "altname": "QNTEUR",
+            "nom": "QNT/EUR",
+            "symbole": "QNT",
+            "crypto": "Quant",
+            "capitalisation_eur": 1926909775
         },
         {
             "id": "CROEUR",
@@ -3193,7 +3193,7 @@
             "nom": "CRO/EUR",
             "symbole": "CRO",
             "crypto": "Cronos",
-            "capitalisation_eur": 1858464529
+            "capitalisation_eur": 1904038594
         },
         {
             "id": "PAXGEUR",
@@ -3201,7 +3201,7 @@
             "nom": "PAXG/EUR",
             "symbole": "PAXG",
             "crypto": "PAX Gold",
-            "capitalisation_eur": 1445725704
+            "capitalisation_eur": 1455037859
         },
         {
             "id": "USDDEUR",
@@ -3209,15 +3209,7 @@
             "nom": "USDD/EUR",
             "symbole": "USDD",
             "crypto": "USDD",
-            "capitalisation_eur": 1366603255
-        },
-        {
-            "id": "PEPEEUR",
-            "altname": "PEPEEUR",
-            "nom": "PEPE/EUR",
-            "symbole": "PEPE",
-            "crypto": "Pepe",
-            "capitalisation_eur": 1323343859
+            "capitalisation_eur": 1360318203
         },
         {
             "id": "AAVEEUR",
@@ -3225,39 +3217,15 @@
             "nom": "AAVE/EUR",
             "symbole": "AAVE",
             "crypto": "Aave",
-            "capitalisation_eur": 1316621547
+            "capitalisation_eur": 1354027808
         },
         {
-            "id": "ONDOEUR",
-            "altname": "ONDOEUR",
-            "nom": "ONDO/EUR",
-            "symbole": "ONDO",
-            "crypto": "Ondo",
-            "capitalisation_eur": 1230245123
-        },
-        {
-            "id": "ENAEUR",
-            "altname": "ENAEUR",
-            "nom": "ENA/EUR",
-            "symbole": "ENA",
-            "crypto": "Ethena",
-            "capitalisation_eur": 1203282071
-        },
-        {
-            "id": "WLFIEUR",
-            "altname": "WLFIEUR",
-            "nom": "WLFI/EUR",
-            "symbole": "WLFI",
-            "crypto": "World Liberty Financial",
-            "capitalisation_eur": 1154836716
-        },
-        {
-            "id": "ASTEREUR",
-            "altname": "ASTEREUR",
-            "nom": "ASTER/EUR",
-            "symbole": "ASTER",
-            "crypto": "Aster",
-            "capitalisation_eur": 1126977396
+            "id": "PEPEEUR",
+            "altname": "PEPEEUR",
+            "nom": "PEPE/EUR",
+            "symbole": "PEPE",
+            "crypto": "Pepe",
+            "capitalisation_eur": 1348099100
         },
         {
             "id": "VVVEUR",
@@ -3265,7 +3233,39 @@
             "nom": "VVV/EUR",
             "symbole": "VVV",
             "crypto": "Venice Token",
-            "capitalisation_eur": 1106006967
+            "capitalisation_eur": 1317308234
+        },
+        {
+            "id": "ONDOEUR",
+            "altname": "ONDOEUR",
+            "nom": "ONDO/EUR",
+            "symbole": "ONDO",
+            "crypto": "Ondo",
+            "capitalisation_eur": 1263427329
+        },
+        {
+            "id": "ENAEUR",
+            "altname": "ENAEUR",
+            "nom": "ENA/EUR",
+            "symbole": "ENA",
+            "crypto": "Ethena",
+            "capitalisation_eur": 1252956599
+        },
+        {
+            "id": "WLFIEUR",
+            "altname": "WLFIEUR",
+            "nom": "WLFI/EUR",
+            "symbole": "WLFI",
+            "crypto": "World Liberty Financial",
+            "capitalisation_eur": 1232617296
+        },
+        {
+            "id": "ASTEREUR",
+            "altname": "ASTEREUR",
+            "nom": "ASTER/EUR",
+            "symbole": "ASTER",
+            "crypto": "Aster",
+            "capitalisation_eur": 1161484147
         },
         {
             "id": "MNTEUR",
@@ -3273,7 +3273,7 @@
             "nom": "MNT/EUR",
             "symbole": "MNT",
             "crypto": "Mantle",
-            "capitalisation_eur": 1081974719
+            "capitalisation_eur": 1142751634
         },
         {
             "id": "JSTEUR",
@@ -3281,7 +3281,7 @@
             "nom": "JST/EUR",
             "symbole": "JST",
             "crypto": "JUST",
-            "capitalisation_eur": 1075215783
+            "capitalisation_eur": 1079788772
         },
         {
             "id": "DOTEUR",
@@ -3289,15 +3289,7 @@
             "nom": "DOT/EUR",
             "symbole": "DOT",
             "crypto": "Polkadot",
-            "capitalisation_eur": 1018487745
-        },
-        {
-            "id": "ICPEUR",
-            "altname": "ICPEUR",
-            "nom": "ICP/EUR",
-            "symbole": "ICP",
-            "crypto": "Internet Computer",
-            "capitalisation_eur": 1014679172
+            "capitalisation_eur": 1036603798
         },
         {
             "id": "MORPHOEUR",
@@ -3305,7 +3297,15 @@
             "nom": "MORPHO/EUR",
             "symbole": "MORPHO",
             "crypto": "Morpho",
-            "capitalisation_eur": 1005561564
+            "capitalisation_eur": 1031818362
+        },
+        {
+            "id": "ICPEUR",
+            "altname": "ICPEUR",
+            "nom": "ICP/EUR",
+            "symbole": "ICP",
+            "crypto": "Internet Computer",
+            "capitalisation_eur": 1027974649
         },
         {
             "id": "BGBEUR",
@@ -3313,7 +3313,7 @@
             "nom": "BGB/EUR",
             "symbole": "BGB",
             "crypto": "Bitget Token",
-            "capitalisation_eur": 977077844
+            "capitalisation_eur": 984605347
         },
         {
             "id": "SKYEUR",
@@ -3321,7 +3321,7 @@
             "nom": "SKY/EUR",
             "symbole": "SKY",
             "crypto": "Sky",
-            "capitalisation_eur": 878077017
+            "capitalisation_eur": 901284204
         },
         {
             "id": "XETCZEUR",
@@ -3329,7 +3329,7 @@
             "nom": "ETC/EUR",
             "symbole": "ETC",
             "crypto": "Ethereum Classic",
-            "capitalisation_eur": 832271050
+            "capitalisation_eur": 857312900
         },
         {
             "id": "WLDEUR",
@@ -3337,7 +3337,7 @@
             "nom": "WLD/EUR",
             "symbole": "WLD",
             "crypto": "Worldcoin",
-            "capitalisation_eur": 812924808
+            "capitalisation_eur": 835585646
         },
         {
             "id": "PUMPEUR",
@@ -3345,15 +3345,15 @@
             "nom": "PUMP/EUR",
             "symbole": "PUMP",
             "crypto": "Pump.fun",
-            "capitalisation_eur": 783027446
+            "capitalisation_eur": 831972372
         },
         {
-            "id": "NIGHTEUR",
-            "altname": "NIGHTEUR",
-            "nom": "NIGHT/EUR",
-            "symbole": "NIGHT",
-            "crypto": "Midnight",
-            "capitalisation_eur": 738213531
+            "id": "POLEUR",
+            "altname": "POLEUR",
+            "nom": "POL/EUR",
+            "symbole": "POL",
+            "crypto": "POL (ex-MATIC)",
+            "capitalisation_eur": 743415616
         }
     ]
 }
