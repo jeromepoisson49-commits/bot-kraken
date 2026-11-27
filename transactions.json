@@ -108,5 +108,15 @@
         "frais_eur": 0.0,
         "gain_perte": 0.09732173413178202,
         "date": "2026-11-25T19:57:26.142030+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "Zcash",
+        "paire": "XZECZEUR",
+        "prix_achat": 690.878,
+        "quantite": 0.014474335555626319,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-27T11:38:45.093530+00:00"
     }
 ]
