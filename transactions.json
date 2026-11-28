@@ -118,5 +118,15 @@
         "montant_eur": 10.0,
         "frais_eur": 0.0,
         "date": "2026-11-27T11:38:45.093530+00:00"
+    },
+    {
+        "type": "ACHAT",
+        "crypto": "Pump.fun",
+        "paire": "PUMPEUR",
+        "prix_achat": 0.002384,
+        "quantite": 4194.6308724832215,
+        "montant_eur": 10.0,
+        "frais_eur": 0.0,
+        "date": "2026-11-28T02:43:26.245139+00:00"
     }
 ]
